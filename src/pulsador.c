@@ -1,4 +1,5 @@
 #include "pulsador.h"
+#include "Moto.h"
 #include <sapi.h>
 
 
@@ -11,7 +12,14 @@ void inciarPulsador(Pulsador * bn,gpioMap_t botonn,buttonhander onPressP,buttonh
 	bn->modelo=modelo;
 
 }
-
+//int pasotiempo (Pulsador * bn){
+//	Moto * model = (Moto *)bn;
+//	return delayRead(&model->tickDelStart);
+//}
+  void detenerTiempo(Pulsador * bn){
+	  Moto * model = (Moto *)bn;
+	  model->tiempo=Detener;
+  }
 
 
 void controladorBoton(Pulsador * bn){
@@ -23,6 +31,8 @@ void controladorBoton(Pulsador * bn){
 			if(gpioRead(bn->boton) == 0){
 				bn->estado=Button_falling;
 				bn->ultimoCambio=tickActual;
+				detenerTiempo(bn->modelo);
+
 			}else{
 				bn->estado = Button_up;
 			}
@@ -62,6 +72,7 @@ void controladorBoton(Pulsador * bn){
 				}
 
 	}
+
 }
 
 

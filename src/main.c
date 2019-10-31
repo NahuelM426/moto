@@ -10,7 +10,7 @@
 #include "pulsador.h"
 #include "../inc/Moto.h"
 #include "MotoRender.h"
-#include "UartConnector.h"
+#include "ArrancadorRemoto.h"
 
 /*==================[funcion principal]======================================*/
 
@@ -20,6 +20,8 @@
 void moto_comenzarArranque(void * p){
 	((Moto *)p)->arrancado = PararArranque;
 	((Moto *)p)->electricidad =TengoElectricidad;
+	((Moto *)p)->tiempo =Detener;
+
 }
 
 void moto_pararArranque(void * p){
@@ -28,12 +30,35 @@ void moto_pararArranque(void * p){
 void moto_cortarCircuito(void * p){
 	((Moto *)p)->electricidad=NotengoEletricidad;
 }
+void moto_Opt(void * p){
+	((Moto *)p)->arrancado = DarArranque;
+}
 
 
-
-
-
-
+void bluetoothCommandReceived(void * Motopointer, uint8_t byte) {
+	if(byte == 'a') {
+		moto_comenzarArranque((Moto *)Motopointer);
+		Moto * model = (Moto *)Motopointer;
+		delayInit(&model->tickDelStart,3000);
+		model->tiempo = Iniciar;
+	}
+	if(byte == 'f') {
+		moto_pararArranque((Moto *)Motopointer);
+	}
+	if(byte == 'p') {
+		moto_cortarCircuito((Moto *)Motopointer);
+		moto_pararArranque((Moto *)Motopointer);
+	}
+}
+//void modelChanged(void * uartConnectorPointer, Moto * model) {
+//	ArrancadorRemoto * uartConnector = (ArrancadorRemoto *) uartConnectorPointer;
+//	if(motoArrancado(model)) {
+//		uartConnector_send(uartConnector, "LED_ON");
+//	}
+//	else{
+//		uartConnector_send(uartConnector, "LED_OFF");
+//	}
+//}
 
 
 // FUNCION PRINCIPAL, PUNTO DE ENTRADA AL PROGRAMA LUEGO DE ENCENDIDO O RESET.
@@ -57,6 +82,7 @@ int main( void )
    Pulsador pulsador;
    MotoRender controladorDeSalida;
    Moto moto;
+   ArrancadorRemoto uartConnector;
 
 
    MotoIniciar(&moto,DarArranque,NotengoEletricidad);
@@ -65,12 +91,17 @@ int main( void )
 
    inciarPulsador(&pulsador,TEC2,moto_comenzarArranque,moto_pararArranque, &moto);
 
+   ArrancadorRemoto_initBt(&uartConnector, &moto, bluetoothCommandReceived,moto_Opt);
+
+   //Moto_setObserver(&moto, (void *)&uartConnector, modelChanged);
+
    button_init(&button, TEC1,moto_cortarCircuito,&moto);
 
    // ---------- REPETIR POR SIEMPRE --------------------------
    while( TRUE ) {
 	   button_update(&button);
 	   controladorBoton(&pulsador);
+	   uartConnector_update(&uartConnector);
 	   controladorMotoRender(&controladorDeSalida);
 	   delay(1);
    }

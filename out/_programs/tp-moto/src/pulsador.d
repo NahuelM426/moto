@@ -67,7 +67,7 @@ _programs/tp-moto/out/_programs/tp-moto/src/pulsador.o: \
  libs/lpc_open/lpc_chip_43xx/inc/lpc_types.h \
  libs/sapi/sapi_v0.5.2/board/inc/sapi_boards.h \
  libs/sapi/sapi_v0.5.2/board/inc/sapi_peripheral_map.h \
- libs/sapi/sapi_v0.5.2/base/inc/sapi.h \
+ _programs/tp-moto/inc/Moto.h libs/sapi/sapi_v0.5.2/base/inc/sapi.h \
  libs/sapi/sapi_v0.5.2/base/inc/sapi_datatypes.h \
  libs/sapi/sapi_v0.5.2/board/inc/sapi_board.h \
  libs/sapi/sapi_v0.5.2/soc/peripherals/inc/sapi_tick.h \

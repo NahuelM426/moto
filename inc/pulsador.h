@@ -32,7 +32,7 @@ void controladorBoton(Pulsador * bn);
 void controlDeLed(Pulsador * bn);
 void pulsador_onPress(Pulsador * pulsador, buttonhander eventHandler);
 void pulsador_onRelease(Pulsador * pulsador, buttonhander eventHandler);
-
+int pasoTiempo(Pulsador * bn);
 
 
 

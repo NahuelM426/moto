@@ -122,4 +122,4 @@ _programs/tp-moto/out/_programs/tp-moto/src/main.o: \
  libs/sapi/sapi_v0.5.2/external_peripherals/ultrasonic/hcsr04/inc/sapi_ultrasonic_hcsr04.h \
  _programs/tp-moto/inc/Button.h _programs/tp-moto/inc/pulsador.h \
  _programs/tp-moto/src/../inc/Moto.h _programs/tp-moto/inc/MotoRender.h \
- _programs/tp-moto/inc/Moto.h _programs/tp-moto/inc/UartConnector.h
+ _programs/tp-moto/inc/Moto.h _programs/tp-moto/inc/ArrancadorRemoto.h

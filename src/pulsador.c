@@ -12,10 +12,6 @@ void inciarPulsador(Pulsador * bn,gpioMap_t botonn,buttonhander onPressP,buttonh
 	bn->modelo=modelo;
 
 }
-//int pasotiempo (Pulsador * bn){
-//	Moto * model = (Moto *)bn;
-//	return delayRead(&model->tickDelStart);
-//}
   void detenerTiempo(Pulsador * bn){
 	  Moto * model = (Moto *)bn;
 	  model->tiempo=Detener;

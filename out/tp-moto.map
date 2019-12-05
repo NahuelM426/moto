@@ -193,8 +193,6 @@ Discarded input sections
  .text          0x0000000000000000        0x0 _programs/tp-moto/out/_programs/tp-moto/src/ArrancadorRemoto.o
  .data          0x0000000000000000        0x0 _programs/tp-moto/out/_programs/tp-moto/src/ArrancadorRemoto.o
  .bss           0x0000000000000000        0x0 _programs/tp-moto/out/_programs/tp-moto/src/ArrancadorRemoto.o
- .text.uartConnector_send
-                0x0000000000000000       0x14 _programs/tp-moto/out/_programs/tp-moto/src/ArrancadorRemoto.o
  .group         0x0000000000000000        0xc _programs/tp-moto/out/_programs/tp-moto/src/pulsador.o
  .group         0x0000000000000000        0xc _programs/tp-moto/out/_programs/tp-moto/src/pulsador.o
  .group         0x0000000000000000        0xc _programs/tp-moto/out/_programs/tp-moto/src/pulsador.o
@@ -544,8 +542,6 @@ Discarded input sections
  .text          0x0000000000000000        0x0 _programs/tp-moto/out/_programs/tp-moto/src/Moto.o
  .data          0x0000000000000000        0x0 _programs/tp-moto/out/_programs/tp-moto/src/Moto.o
  .bss           0x0000000000000000        0x0 _programs/tp-moto/out/_programs/tp-moto/src/Moto.o
- .text.Moto_setObserver
-                0x0000000000000000        0x6 _programs/tp-moto/out/_programs/tp-moto/src/Moto.o
  .text.setValue
                 0x0000000000000000       0x10 _programs/tp-moto/out/_programs/tp-moto/src/Moto.o
  .text.Moto_enable
@@ -9941,10 +9937,6 @@ Discarded input sections
  .text          0x0000000000000000        0x0 _programs/tp-moto/out/libs/sapi/sapi_v0.5.2/soc/peripherals/src/sapi_uart.o
  .data          0x0000000000000000        0x0 _programs/tp-moto/out/libs/sapi/sapi_v0.5.2/soc/peripherals/src/sapi_uart.o
  .bss           0x0000000000000000        0x0 _programs/tp-moto/out/libs/sapi/sapi_v0.5.2/soc/peripherals/src/sapi_uart.o
- .text.uartTxReady
-                0x0000000000000000       0x18 _programs/tp-moto/out/libs/sapi/sapi_v0.5.2/soc/peripherals/src/sapi_uart.o
- .text.uartTxWrite
-                0x0000000000000000       0x14 _programs/tp-moto/out/libs/sapi/sapi_v0.5.2/soc/peripherals/src/sapi_uart.o
  .text.uartInit2
                 0x0000000000000000       0xac _programs/tp-moto/out/libs/sapi/sapi_v0.5.2/soc/peripherals/src/sapi_uart.o
  .text.waitForReceiveStringOrTimeout
@@ -9955,10 +9947,6 @@ Discarded input sections
                 0x0000000000000000       0xc8 _programs/tp-moto/out/libs/sapi/sapi_v0.5.2/soc/peripherals/src/sapi_uart.o
  .text.receiveBytesUntilReceiveStringOrTimeoutBlocking
                 0x0000000000000000       0x40 _programs/tp-moto/out/libs/sapi/sapi_v0.5.2/soc/peripherals/src/sapi_uart.o
- .text.uartWriteByte
-                0x0000000000000000       0x1a _programs/tp-moto/out/libs/sapi/sapi_v0.5.2/soc/peripherals/src/sapi_uart.o
- .text.uartWriteString
-                0x0000000000000000       0x18 _programs/tp-moto/out/libs/sapi/sapi_v0.5.2/soc/peripherals/src/sapi_uart.o
  .text.uartWriteByteArray
                 0x0000000000000000       0x1c _programs/tp-moto/out/libs/sapi/sapi_v0.5.2/soc/peripherals/src/sapi_uart.o
  .bss.i.11781   0x0000000000000000        0x4 _programs/tp-moto/out/libs/sapi/sapi_v0.5.2/soc/peripherals/src/sapi_uart.o
@@ -17146,7 +17134,7 @@ END GROUP
  *(.rodata.$Flash2*)
  *(.rodata.$MFlashB512*)
 
-.text           0x000000001a000000     0x1f94
+.text           0x000000001a000000     0x2054
  FILL mask 0xff
                 0x000000001a000000                __vectors_start__ = ABSOLUTE (.)
  *(.isr_vector)
@@ -17159,19 +17147,19 @@ END GROUP
                 0x000000001a000114                . = ALIGN (0x4)
                 0x000000001a000114                __section_table_start = .
                 0x000000001a000114                __data_section_table = .
-                0x000000001a000114        0x4 LONG 0x1a001fa0 LOADADDR (.data)
+                0x000000001a000114        0x4 LONG 0x1a002060 LOADADDR (.data)
                 0x000000001a000118        0x4 LONG 0x10000000 ADDR (.data)
                 0x000000001a00011c        0x4 LONG 0x48 SIZEOF (.data)
-                0x000000001a000120        0x4 LONG 0x1a001fa0 LOADADDR (.data_RAM2)
+                0x000000001a000120        0x4 LONG 0x1a002060 LOADADDR (.data_RAM2)
                 0x000000001a000124        0x4 LONG 0x10080000 ADDR (.data_RAM2)
                 0x000000001a000128        0x4 LONG 0x0 SIZEOF (.data_RAM2)
-                0x000000001a00012c        0x4 LONG 0x1a001fa0 LOADADDR (.data_RAM3)
+                0x000000001a00012c        0x4 LONG 0x1a002060 LOADADDR (.data_RAM3)
                 0x000000001a000130        0x4 LONG 0x20000000 ADDR (.data_RAM3)
                 0x000000001a000134        0x4 LONG 0x0 SIZEOF (.data_RAM3)
-                0x000000001a000138        0x4 LONG 0x1a001fa0 LOADADDR (.data_RAM4)
+                0x000000001a000138        0x4 LONG 0x1a002060 LOADADDR (.data_RAM4)
                 0x000000001a00013c        0x4 LONG 0x20008000 ADDR (.data_RAM4)
                 0x000000001a000140        0x4 LONG 0x0 SIZEOF (.data_RAM4)
-                0x000000001a000144        0x4 LONG 0x1a001fa0 LOADADDR (.data_RAM5)
+                0x000000001a000144        0x4 LONG 0x1a002060 LOADADDR (.data_RAM5)
                 0x000000001a000148        0x4 LONG 0x2000c000 ADDR (.data_RAM5)
                 0x000000001a00014c        0x4 LONG 0x0 SIZEOF (.data_RAM5)
                 0x000000001a000150                __data_section_table_end = .
@@ -17277,356 +17265,379 @@ END GROUP
  .text.uartConnector_update
                 0x000000001a000356       0x48 _programs/tp-moto/out/_programs/tp-moto/src/ArrancadorRemoto.o
                 0x000000001a000356                uartConnector_update
+ .text.ArrancarRemoto_send
+                0x000000001a00039e       0x14 _programs/tp-moto/out/_programs/tp-moto/src/ArrancadorRemoto.o
+                0x000000001a00039e                ArrancarRemoto_send
  .text.inciarPulsador
-                0x000000001a00039e       0x20 _programs/tp-moto/out/_programs/tp-moto/src/pulsador.o
-                0x000000001a00039e                inciarPulsador
+                0x000000001a0003b2       0x20 _programs/tp-moto/out/_programs/tp-moto/src/pulsador.o
+                0x000000001a0003b2                inciarPulsador
  .text.detenerTiempo
-                0x000000001a0003be        0x6 _programs/tp-moto/out/_programs/tp-moto/src/pulsador.o
-                0x000000001a0003be                detenerTiempo
+                0x000000001a0003d2        0x6 _programs/tp-moto/out/_programs/tp-moto/src/pulsador.o
+                0x000000001a0003d2                detenerTiempo
  .text.controladorBoton
-                0x000000001a0003c4       0x92 _programs/tp-moto/out/_programs/tp-moto/src/pulsador.o
-                0x000000001a0003c4                controladorBoton
+                0x000000001a0003d8       0x92 _programs/tp-moto/out/_programs/tp-moto/src/pulsador.o
+                0x000000001a0003d8                controladorBoton
  .text.MotoIniciar
-                0x000000001a000456        0xc _programs/tp-moto/out/_programs/tp-moto/src/Moto.o
-                0x000000001a000456                MotoIniciar
+                0x000000001a00046a        0xc _programs/tp-moto/out/_programs/tp-moto/src/Moto.o
+                0x000000001a00046a                MotoIniciar
+ .text.Moto_setObserver
+                0x000000001a000476        0x6 _programs/tp-moto/out/_programs/tp-moto/src/Moto.o
+                0x000000001a000476                Moto_setObserver
  .text.motoArrancado
-                0x000000001a000462        0x4 _programs/tp-moto/out/_programs/tp-moto/src/Moto.o
-                0x000000001a000462                motoArrancado
+                0x000000001a00047c        0x4 _programs/tp-moto/out/_programs/tp-moto/src/Moto.o
+                0x000000001a00047c                motoArrancado
  .text.motoElectricidad
-                0x000000001a000466        0x4 _programs/tp-moto/out/_programs/tp-moto/src/Moto.o
-                0x000000001a000466                motoElectricidad
+                0x000000001a000480        0x4 _programs/tp-moto/out/_programs/tp-moto/src/Moto.o
+                0x000000001a000480                motoElectricidad
  .text.iniciarMotoRender
-                0x000000001a00046a        0x8 _programs/tp-moto/out/_programs/tp-moto/src/MotoRender.o
-                0x000000001a00046a                iniciarMotoRender
+                0x000000001a000484        0x8 _programs/tp-moto/out/_programs/tp-moto/src/MotoRender.o
+                0x000000001a000484                iniciarMotoRender
  .text.controladorMotoRender
-                0x000000001a000472       0x2a _programs/tp-moto/out/_programs/tp-moto/src/MotoRender.o
-                0x000000001a000472                controladorMotoRender
+                0x000000001a00048c       0x2a _programs/tp-moto/out/_programs/tp-moto/src/MotoRender.o
+                0x000000001a00048c                controladorMotoRender
  .text.moto_comenzarArranque
-                0x000000001a00049c        0xc _programs/tp-moto/out/_programs/tp-moto/src/main.o
-                0x000000001a00049c                moto_comenzarArranque
+                0x000000001a0004b6        0xc _programs/tp-moto/out/_programs/tp-moto/src/main.o
+                0x000000001a0004b6                moto_comenzarArranque
  .text.moto_pararArranque
-                0x000000001a0004a8        0x6 _programs/tp-moto/out/_programs/tp-moto/src/main.o
-                0x000000001a0004a8                moto_pararArranque
+                0x000000001a0004c2        0x6 _programs/tp-moto/out/_programs/tp-moto/src/main.o
+                0x000000001a0004c2                moto_pararArranque
  .text.moto_cortarCircuito
-                0x000000001a0004ae        0x6 _programs/tp-moto/out/_programs/tp-moto/src/main.o
-                0x000000001a0004ae                moto_cortarCircuito
+                0x000000001a0004c8        0x6 _programs/tp-moto/out/_programs/tp-moto/src/main.o
+                0x000000001a0004c8                moto_cortarCircuito
  .text.moto_Opt
-                0x000000001a0004b4        0x6 _programs/tp-moto/out/_programs/tp-moto/src/main.o
-                0x000000001a0004b4                moto_Opt
+                0x000000001a0004ce        0x6 _programs/tp-moto/out/_programs/tp-moto/src/main.o
+                0x000000001a0004ce                moto_Opt
  .text.bluetoothCommandReceived
-                0x000000001a0004ba       0x42 _programs/tp-moto/out/_programs/tp-moto/src/main.o
-                0x000000001a0004ba                bluetoothCommandReceived
- .text.main     0x000000001a0004fc       0x8c _programs/tp-moto/out/_programs/tp-moto/src/main.o
-                0x000000001a0004fc                main
+                0x000000001a0004d4       0x42 _programs/tp-moto/out/_programs/tp-moto/src/main.o
+                0x000000001a0004d4                bluetoothCommandReceived
+ *fill*         0x000000001a000516        0x2 ff
+ .text.modelChanged
+                0x000000001a000518       0x28 _programs/tp-moto/out/_programs/tp-moto/src/main.o
+                0x000000001a000518                modelChanged
+ .text.main     0x000000001a000540       0x9c _programs/tp-moto/out/_programs/tp-moto/src/main.o
+                0x000000001a000540                main
  .text.button_init
-                0x000000001a000588        0xc _programs/tp-moto/out/_programs/tp-moto/src/Button.o
-                0x000000001a000588                button_init
+                0x000000001a0005dc        0xc _programs/tp-moto/out/_programs/tp-moto/src/Button.o
+                0x000000001a0005dc                button_init
  .text.changeState
-                0x000000001a000594        0x4 _programs/tp-moto/out/_programs/tp-moto/src/Button.o
-                0x000000001a000594                changeState
+                0x000000001a0005e8        0x4 _programs/tp-moto/out/_programs/tp-moto/src/Button.o
+                0x000000001a0005e8                changeState
  .text.initDelayCounter
-                0x000000001a000598        0xe _programs/tp-moto/out/_programs/tp-moto/src/Button.o
-                0x000000001a000598                initDelayCounter
+                0x000000001a0005ec        0xe _programs/tp-moto/out/_programs/tp-moto/src/Button.o
+                0x000000001a0005ec                initDelayCounter
  .text.button_update
-                0x000000001a0005a6       0x96 _programs/tp-moto/out/_programs/tp-moto/src/Button.o
-                0x000000001a0005a6                button_update
+                0x000000001a0005fa       0x96 _programs/tp-moto/out/_programs/tp-moto/src/Button.o
+                0x000000001a0005fa                button_update
  .text.initialise_monitor_handles
-                0x000000001a00063c        0x2 _programs/tp-moto/out/libs/cmsis_core//src/armv7m_startup.o
-                0x000000001a00063c                initialise_monitor_handles
- *fill*         0x000000001a00063e        0x2 ff
+                0x000000001a000690        0x2 _programs/tp-moto/out/libs/cmsis_core//src/armv7m_startup.o
+                0x000000001a000690                initialise_monitor_handles
+ *fill*         0x000000001a000692        0x2 ff
  .text.Reset_Handler
-                0x000000001a000640       0x88 _programs/tp-moto/out/libs/cmsis_core//src/armv7m_startup.o
-                0x000000001a000640                Reset_Handler
- .text._fini    0x000000001a0006c8        0x2 _programs/tp-moto/out/libs/cmsis_core//src/armv7m_startup.o
-                0x000000001a0006c8                _fini
- .text._init    0x000000001a0006ca        0x2 _programs/tp-moto/out/libs/cmsis_core//src/armv7m_startup.o
-                0x000000001a0006ca                _init
+                0x000000001a000694       0x88 _programs/tp-moto/out/libs/cmsis_core//src/armv7m_startup.o
+                0x000000001a000694                Reset_Handler
+ .text._fini    0x000000001a00071c        0x2 _programs/tp-moto/out/libs/cmsis_core//src/armv7m_startup.o
+                0x000000001a00071c                _fini
+ .text._init    0x000000001a00071e        0x2 _programs/tp-moto/out/libs/cmsis_core//src/armv7m_startup.o
+                0x000000001a00071e                _init
  .text.Board_LED_Init
-                0x000000001a0006cc       0x44 _programs/tp-moto/out/libs/lpc_open/boards/edu_ciaa_nxp/src/board.o
+                0x000000001a000720       0x44 _programs/tp-moto/out/libs/lpc_open/boards/edu_ciaa_nxp/src/board.o
  .text.Board_TEC_Init
-                0x000000001a000710       0x40 _programs/tp-moto/out/libs/lpc_open/boards/edu_ciaa_nxp/src/board.o
+                0x000000001a000764       0x40 _programs/tp-moto/out/libs/lpc_open/boards/edu_ciaa_nxp/src/board.o
  .text.Board_GPIO_Init
-                0x000000001a000750       0x40 _programs/tp-moto/out/libs/lpc_open/boards/edu_ciaa_nxp/src/board.o
+                0x000000001a0007a4       0x40 _programs/tp-moto/out/libs/lpc_open/boards/edu_ciaa_nxp/src/board.o
  .text.Board_ADC_Init
-                0x000000001a000790       0x30 _programs/tp-moto/out/libs/lpc_open/boards/edu_ciaa_nxp/src/board.o
+                0x000000001a0007e4       0x30 _programs/tp-moto/out/libs/lpc_open/boards/edu_ciaa_nxp/src/board.o
  .text.Board_SPI_Init
-                0x000000001a0007c0       0x38 _programs/tp-moto/out/libs/lpc_open/boards/edu_ciaa_nxp/src/board.o
+                0x000000001a000814       0x38 _programs/tp-moto/out/libs/lpc_open/boards/edu_ciaa_nxp/src/board.o
  .text.Board_I2C_Init
-                0x000000001a0007f8       0x24 _programs/tp-moto/out/libs/lpc_open/boards/edu_ciaa_nxp/src/board.o
+                0x000000001a00084c       0x24 _programs/tp-moto/out/libs/lpc_open/boards/edu_ciaa_nxp/src/board.o
  .text.Board_Debug_Init
-                0x000000001a00081c       0x24 _programs/tp-moto/out/libs/lpc_open/boards/edu_ciaa_nxp/src/board.o
-                0x000000001a00081c                Board_Debug_Init
+                0x000000001a000870       0x24 _programs/tp-moto/out/libs/lpc_open/boards/edu_ciaa_nxp/src/board.o
+                0x000000001a000870                Board_Debug_Init
  .text.Board_Init
-                0x000000001a000840       0x30 _programs/tp-moto/out/libs/lpc_open/boards/edu_ciaa_nxp/src/board.o
-                0x000000001a000840                Board_Init
+                0x000000001a000894       0x30 _programs/tp-moto/out/libs/lpc_open/boards/edu_ciaa_nxp/src/board.o
+                0x000000001a000894                Board_Init
  .text.__stdio_init
-                0x000000001a000870        0x8 _programs/tp-moto/out/libs/lpc_open/boards/edu_ciaa_nxp/src/board.o
-                0x000000001a000870                __stdio_init
+                0x000000001a0008c4        0x8 _programs/tp-moto/out/libs/lpc_open/boards/edu_ciaa_nxp/src/board.o
+                0x000000001a0008c4                __stdio_init
  .text.Board_SetupMuxing
-                0x000000001a000878       0x38 _programs/tp-moto/out/libs/lpc_open/boards/edu_ciaa_nxp/src/board_sysinit.o
-                0x000000001a000878                Board_SetupMuxing
+                0x000000001a0008cc       0x38 _programs/tp-moto/out/libs/lpc_open/boards/edu_ciaa_nxp/src/board_sysinit.o
+                0x000000001a0008cc                Board_SetupMuxing
  .text.Board_SetupClocking
-                0x000000001a0008b0       0x6c _programs/tp-moto/out/libs/lpc_open/boards/edu_ciaa_nxp/src/board_sysinit.o
-                0x000000001a0008b0                Board_SetupClocking
+                0x000000001a000904       0x6c _programs/tp-moto/out/libs/lpc_open/boards/edu_ciaa_nxp/src/board_sysinit.o
+                0x000000001a000904                Board_SetupClocking
  .text.Board_SystemInit
-                0x000000001a00091c        0xc _programs/tp-moto/out/libs/lpc_open/boards/edu_ciaa_nxp/src/board_sysinit.o
-                0x000000001a00091c                Board_SystemInit
+                0x000000001a000970        0xc _programs/tp-moto/out/libs/lpc_open/boards/edu_ciaa_nxp/src/board_sysinit.o
+                0x000000001a000970                Board_SystemInit
  .text.Chip_UART_GetIndex
-                0x000000001a000928       0x2c _programs/tp-moto/out/libs/lpc_open/lpc_chip_43xx/src/uart_18xx_43xx.o
+                0x000000001a00097c       0x2c _programs/tp-moto/out/libs/lpc_open/lpc_chip_43xx/src/uart_18xx_43xx.o
  .text.Chip_UART_Init
-                0x000000001a000954       0x54 _programs/tp-moto/out/libs/lpc_open/lpc_chip_43xx/src/uart_18xx_43xx.o
-                0x000000001a000954                Chip_UART_Init
+                0x000000001a0009a8       0x54 _programs/tp-moto/out/libs/lpc_open/lpc_chip_43xx/src/uart_18xx_43xx.o
+                0x000000001a0009a8                Chip_UART_Init
  .text.Chip_UART_SetBaud
-                0x000000001a0009a8       0x40 _programs/tp-moto/out/libs/lpc_open/lpc_chip_43xx/src/uart_18xx_43xx.o
-                0x000000001a0009a8                Chip_UART_SetBaud
+                0x000000001a0009fc       0x40 _programs/tp-moto/out/libs/lpc_open/lpc_chip_43xx/src/uart_18xx_43xx.o
+                0x000000001a0009fc                Chip_UART_SetBaud
  .text.Chip_UART_SetBaudFDR
-                0x000000001a0009e8       0xe8 _programs/tp-moto/out/libs/lpc_open/lpc_chip_43xx/src/uart_18xx_43xx.o
-                0x000000001a0009e8                Chip_UART_SetBaudFDR
+                0x000000001a000a3c       0xe8 _programs/tp-moto/out/libs/lpc_open/lpc_chip_43xx/src/uart_18xx_43xx.o
+                0x000000001a000a3c                Chip_UART_SetBaudFDR
  .text.pll_calc_divs
-                0x000000001a000ad0       0xa4 _programs/tp-moto/out/libs/lpc_open/lpc_chip_43xx/src/clock_18xx_43xx.o
+                0x000000001a000b24       0xa4 _programs/tp-moto/out/libs/lpc_open/lpc_chip_43xx/src/clock_18xx_43xx.o
  .text.pll_get_frac
-                0x000000001a000b74      0x10c _programs/tp-moto/out/libs/lpc_open/lpc_chip_43xx/src/clock_18xx_43xx.o
+                0x000000001a000bc8      0x10c _programs/tp-moto/out/libs/lpc_open/lpc_chip_43xx/src/clock_18xx_43xx.o
  .text.Chip_Clock_FindBaseClock
-                0x000000001a000c80       0x4c _programs/tp-moto/out/libs/lpc_open/lpc_chip_43xx/src/clock_18xx_43xx.o
+                0x000000001a000cd4       0x4c _programs/tp-moto/out/libs/lpc_open/lpc_chip_43xx/src/clock_18xx_43xx.o
  .text.Chip_Clock_EnableCrystal
-                0x000000001a000ccc       0x4c _programs/tp-moto/out/libs/lpc_open/lpc_chip_43xx/src/clock_18xx_43xx.o
-                0x000000001a000ccc                Chip_Clock_EnableCrystal
+                0x000000001a000d20       0x4c _programs/tp-moto/out/libs/lpc_open/lpc_chip_43xx/src/clock_18xx_43xx.o
+                0x000000001a000d20                Chip_Clock_EnableCrystal
  .text.Chip_Clock_GetDividerSource
-                0x000000001a000d18       0x1c _programs/tp-moto/out/libs/lpc_open/lpc_chip_43xx/src/clock_18xx_43xx.o
-                0x000000001a000d18                Chip_Clock_GetDividerSource
+                0x000000001a000d6c       0x1c _programs/tp-moto/out/libs/lpc_open/lpc_chip_43xx/src/clock_18xx_43xx.o
+                0x000000001a000d6c                Chip_Clock_GetDividerSource
  .text.Chip_Clock_GetDividerDivisor
-                0x000000001a000d34       0x1c _programs/tp-moto/out/libs/lpc_open/lpc_chip_43xx/src/clock_18xx_43xx.o
-                0x000000001a000d34                Chip_Clock_GetDividerDivisor
+                0x000000001a000d88       0x1c _programs/tp-moto/out/libs/lpc_open/lpc_chip_43xx/src/clock_18xx_43xx.o
+                0x000000001a000d88                Chip_Clock_GetDividerDivisor
  .text.Chip_Clock_GetClockInputHz
-                0x000000001a000d50       0xb8 _programs/tp-moto/out/libs/lpc_open/lpc_chip_43xx/src/clock_18xx_43xx.o
-                0x000000001a000d50                Chip_Clock_GetClockInputHz
+                0x000000001a000da4       0xb8 _programs/tp-moto/out/libs/lpc_open/lpc_chip_43xx/src/clock_18xx_43xx.o
+                0x000000001a000da4                Chip_Clock_GetClockInputHz
  .text.Chip_Clock_CalcMainPLLValue
-                0x000000001a000e08       0x80 _programs/tp-moto/out/libs/lpc_open/lpc_chip_43xx/src/clock_18xx_43xx.o
-                0x000000001a000e08                Chip_Clock_CalcMainPLLValue
+                0x000000001a000e5c       0x80 _programs/tp-moto/out/libs/lpc_open/lpc_chip_43xx/src/clock_18xx_43xx.o
+                0x000000001a000e5c                Chip_Clock_CalcMainPLLValue
  .text.Chip_Clock_GetMainPLLHz
-                0x000000001a000e88       0x6c _programs/tp-moto/out/libs/lpc_open/lpc_chip_43xx/src/clock_18xx_43xx.o
-                0x000000001a000e88                Chip_Clock_GetMainPLLHz
+                0x000000001a000edc       0x6c _programs/tp-moto/out/libs/lpc_open/lpc_chip_43xx/src/clock_18xx_43xx.o
+                0x000000001a000edc                Chip_Clock_GetMainPLLHz
  .text.Chip_Clock_GetDivRate
-                0x000000001a000ef4       0x22 _programs/tp-moto/out/libs/lpc_open/lpc_chip_43xx/src/clock_18xx_43xx.o
- *fill*         0x000000001a000f16        0x2 ff
+                0x000000001a000f48       0x22 _programs/tp-moto/out/libs/lpc_open/lpc_chip_43xx/src/clock_18xx_43xx.o
+ *fill*         0x000000001a000f6a        0x2 ff
  .text.Chip_Clock_SetBaseClock
-                0x000000001a000f18       0x58 _programs/tp-moto/out/libs/lpc_open/lpc_chip_43xx/src/clock_18xx_43xx.o
-                0x000000001a000f18                Chip_Clock_SetBaseClock
+                0x000000001a000f6c       0x58 _programs/tp-moto/out/libs/lpc_open/lpc_chip_43xx/src/clock_18xx_43xx.o
+                0x000000001a000f6c                Chip_Clock_SetBaseClock
  .text.Chip_Clock_GetBaseClock
-                0x000000001a000f70       0x26 _programs/tp-moto/out/libs/lpc_open/lpc_chip_43xx/src/clock_18xx_43xx.o
-                0x000000001a000f70                Chip_Clock_GetBaseClock
+                0x000000001a000fc4       0x26 _programs/tp-moto/out/libs/lpc_open/lpc_chip_43xx/src/clock_18xx_43xx.o
+                0x000000001a000fc4                Chip_Clock_GetBaseClock
  .text.Chip_Clock_GetBaseClocktHz
-                0x000000001a000f96        0xc _programs/tp-moto/out/libs/lpc_open/lpc_chip_43xx/src/clock_18xx_43xx.o
-                0x000000001a000f96                Chip_Clock_GetBaseClocktHz
- *fill*         0x000000001a000fa2        0x2 ff
+                0x000000001a000fea        0xc _programs/tp-moto/out/libs/lpc_open/lpc_chip_43xx/src/clock_18xx_43xx.o
+                0x000000001a000fea                Chip_Clock_GetBaseClocktHz
+ *fill*         0x000000001a000ff6        0x2 ff
  .text.Chip_Clock_EnableOpts
-                0x000000001a000fa4       0x3c _programs/tp-moto/out/libs/lpc_open/lpc_chip_43xx/src/clock_18xx_43xx.o
-                0x000000001a000fa4                Chip_Clock_EnableOpts
+                0x000000001a000ff8       0x3c _programs/tp-moto/out/libs/lpc_open/lpc_chip_43xx/src/clock_18xx_43xx.o
+                0x000000001a000ff8                Chip_Clock_EnableOpts
  .text.Chip_Clock_Enable
-                0x000000001a000fe0       0x34 _programs/tp-moto/out/libs/lpc_open/lpc_chip_43xx/src/clock_18xx_43xx.o
-                0x000000001a000fe0                Chip_Clock_Enable
+                0x000000001a001034       0x34 _programs/tp-moto/out/libs/lpc_open/lpc_chip_43xx/src/clock_18xx_43xx.o
+                0x000000001a001034                Chip_Clock_Enable
  .text.Chip_Clock_GetRate
-                0x000000001a001014       0x4c _programs/tp-moto/out/libs/lpc_open/lpc_chip_43xx/src/clock_18xx_43xx.o
-                0x000000001a001014                Chip_Clock_GetRate
+                0x000000001a001068       0x4c _programs/tp-moto/out/libs/lpc_open/lpc_chip_43xx/src/clock_18xx_43xx.o
+                0x000000001a001068                Chip_Clock_GetRate
  .text.SystemCoreClockUpdate
-                0x000000001a001060       0x14 _programs/tp-moto/out/libs/lpc_open/lpc_chip_43xx/src/chip_18xx_43xx.o
-                0x000000001a001060                SystemCoreClockUpdate
+                0x000000001a0010b4       0x14 _programs/tp-moto/out/libs/lpc_open/lpc_chip_43xx/src/chip_18xx_43xx.o
+                0x000000001a0010b4                SystemCoreClockUpdate
  .text.Chip_SetupCoreClock
-                0x000000001a001074      0x154 _programs/tp-moto/out/libs/lpc_open/lpc_chip_43xx/src/sysinit_18xx_43xx.o
-                0x000000001a001074                Chip_SetupCoreClock
+                0x000000001a0010c8      0x154 _programs/tp-moto/out/libs/lpc_open/lpc_chip_43xx/src/sysinit_18xx_43xx.o
+                0x000000001a0010c8                Chip_SetupCoreClock
  .text.Chip_ADC_GetClockIndex
-                0x000000001a0011c8       0x14 _programs/tp-moto/out/libs/lpc_open/lpc_chip_43xx/src/adc_18xx_43xx.o
+                0x000000001a00121c       0x14 _programs/tp-moto/out/libs/lpc_open/lpc_chip_43xx/src/adc_18xx_43xx.o
  .text.getClkDiv
-                0x000000001a0011dc       0x32 _programs/tp-moto/out/libs/lpc_open/lpc_chip_43xx/src/adc_18xx_43xx.o
- *fill*         0x000000001a00120e        0x2 ff
+                0x000000001a001230       0x32 _programs/tp-moto/out/libs/lpc_open/lpc_chip_43xx/src/adc_18xx_43xx.o
+ *fill*         0x000000001a001262        0x2 ff
  .text.Chip_ADC_Init
-                0x000000001a001210       0x40 _programs/tp-moto/out/libs/lpc_open/lpc_chip_43xx/src/adc_18xx_43xx.o
-                0x000000001a001210                Chip_ADC_Init
+                0x000000001a001264       0x40 _programs/tp-moto/out/libs/lpc_open/lpc_chip_43xx/src/adc_18xx_43xx.o
+                0x000000001a001264                Chip_ADC_Init
  .text.Chip_ADC_SetSampleRate
-                0x000000001a001250       0x32 _programs/tp-moto/out/libs/lpc_open/lpc_chip_43xx/src/adc_18xx_43xx.o
-                0x000000001a001250                Chip_ADC_SetSampleRate
+                0x000000001a0012a4       0x32 _programs/tp-moto/out/libs/lpc_open/lpc_chip_43xx/src/adc_18xx_43xx.o
+                0x000000001a0012a4                Chip_ADC_SetSampleRate
  .text.Chip_ADC_SetResolution
-                0x000000001a001282        0xc _programs/tp-moto/out/libs/lpc_open/lpc_chip_43xx/src/adc_18xx_43xx.o
-                0x000000001a001282                Chip_ADC_SetResolution
+                0x000000001a0012d6        0xc _programs/tp-moto/out/libs/lpc_open/lpc_chip_43xx/src/adc_18xx_43xx.o
+                0x000000001a0012d6                Chip_ADC_SetResolution
  .text.Chip_GPIO_Init
-                0x000000001a00128e        0x2 _programs/tp-moto/out/libs/lpc_open/lpc_chip_43xx/src/gpio_18xx_43xx.o
-                0x000000001a00128e                Chip_GPIO_Init
+                0x000000001a0012e2        0x2 _programs/tp-moto/out/libs/lpc_open/lpc_chip_43xx/src/gpio_18xx_43xx.o
+                0x000000001a0012e2                Chip_GPIO_Init
  .text.Chip_SSP_GetClockIndex
-                0x000000001a001290       0x14 _programs/tp-moto/out/libs/lpc_open/lpc_chip_43xx/src/ssp_18xx_43xx.o
+                0x000000001a0012e4       0x14 _programs/tp-moto/out/libs/lpc_open/lpc_chip_43xx/src/ssp_18xx_43xx.o
  .text.Chip_SSP_GetPeriphClockIndex
-                0x000000001a0012a4       0x18 _programs/tp-moto/out/libs/lpc_open/lpc_chip_43xx/src/ssp_18xx_43xx.o
+                0x000000001a0012f8       0x18 _programs/tp-moto/out/libs/lpc_open/lpc_chip_43xx/src/ssp_18xx_43xx.o
  .text.Chip_SSP_SetClockRate
-                0x000000001a0012bc       0x12 _programs/tp-moto/out/libs/lpc_open/lpc_chip_43xx/src/ssp_18xx_43xx.o
-                0x000000001a0012bc                Chip_SSP_SetClockRate
+                0x000000001a001310       0x12 _programs/tp-moto/out/libs/lpc_open/lpc_chip_43xx/src/ssp_18xx_43xx.o
+                0x000000001a001310                Chip_SSP_SetClockRate
  .text.Chip_SSP_SetBitRate
-                0x000000001a0012ce       0x3e _programs/tp-moto/out/libs/lpc_open/lpc_chip_43xx/src/ssp_18xx_43xx.o
-                0x000000001a0012ce                Chip_SSP_SetBitRate
+                0x000000001a001322       0x3e _programs/tp-moto/out/libs/lpc_open/lpc_chip_43xx/src/ssp_18xx_43xx.o
+                0x000000001a001322                Chip_SSP_SetBitRate
  .text.Chip_SSP_Init
-                0x000000001a00130c       0x38 _programs/tp-moto/out/libs/lpc_open/lpc_chip_43xx/src/ssp_18xx_43xx.o
-                0x000000001a00130c                Chip_SSP_Init
+                0x000000001a001360       0x38 _programs/tp-moto/out/libs/lpc_open/lpc_chip_43xx/src/ssp_18xx_43xx.o
+                0x000000001a001360                Chip_SSP_Init
  .text.Chip_I2C_EventHandler
-                0x000000001a001344       0x20 _programs/tp-moto/out/libs/lpc_open/lpc_chip_43xx/src/i2c_18xx_43xx.o
-                0x000000001a001344                Chip_I2C_EventHandler
+                0x000000001a001398       0x20 _programs/tp-moto/out/libs/lpc_open/lpc_chip_43xx/src/i2c_18xx_43xx.o
+                0x000000001a001398                Chip_I2C_EventHandler
  .text.Chip_I2C_Init
-                0x000000001a001364       0x24 _programs/tp-moto/out/libs/lpc_open/lpc_chip_43xx/src/i2c_18xx_43xx.o
-                0x000000001a001364                Chip_I2C_Init
+                0x000000001a0013b8       0x24 _programs/tp-moto/out/libs/lpc_open/lpc_chip_43xx/src/i2c_18xx_43xx.o
+                0x000000001a0013b8                Chip_I2C_Init
  .text.Chip_I2C_SetClockRate
-                0x000000001a001388       0x38 _programs/tp-moto/out/libs/lpc_open/lpc_chip_43xx/src/i2c_18xx_43xx.o
-                0x000000001a001388                Chip_I2C_SetClockRate
+                0x000000001a0013dc       0x38 _programs/tp-moto/out/libs/lpc_open/lpc_chip_43xx/src/i2c_18xx_43xx.o
+                0x000000001a0013dc                Chip_I2C_SetClockRate
  .text.SystemInit
-                0x000000001a0013c0       0x38 _programs/tp-moto/out/libs/lpc_open/lpc_startup/src/sysinit.o
-                0x000000001a0013c0                SystemInit
+                0x000000001a001414       0x38 _programs/tp-moto/out/libs/lpc_open/lpc_startup/src/sysinit.o
+                0x000000001a001414                SystemInit
  .text.cyclesCounterInit
-                0x000000001a0013f8       0x1c _programs/tp-moto/out/libs/sapi/sapi_v0.5.2/soc/core/src/sapi_cyclesCounter.o
-                0x000000001a0013f8                cyclesCounterInit
+                0x000000001a00144c       0x1c _programs/tp-moto/out/libs/sapi/sapi_v0.5.2/soc/core/src/sapi_cyclesCounter.o
+                0x000000001a00144c                cyclesCounterInit
  .text.uartRxReady
-                0x000000001a001414       0x18 _programs/tp-moto/out/libs/sapi/sapi_v0.5.2/soc/peripherals/src/sapi_uart.o
-                0x000000001a001414                uartRxReady
+                0x000000001a001468       0x18 _programs/tp-moto/out/libs/sapi/sapi_v0.5.2/soc/peripherals/src/sapi_uart.o
+                0x000000001a001468                uartRxReady
+ .text.uartTxReady
+                0x000000001a001480       0x18 _programs/tp-moto/out/libs/sapi/sapi_v0.5.2/soc/peripherals/src/sapi_uart.o
+                0x000000001a001480                uartTxReady
  .text.uartRxRead
-                0x000000001a00142c       0x14 _programs/tp-moto/out/libs/sapi/sapi_v0.5.2/soc/peripherals/src/sapi_uart.o
-                0x000000001a00142c                uartRxRead
+                0x000000001a001498       0x14 _programs/tp-moto/out/libs/sapi/sapi_v0.5.2/soc/peripherals/src/sapi_uart.o
+                0x000000001a001498                uartRxRead
+ .text.uartTxWrite
+                0x000000001a0014ac       0x14 _programs/tp-moto/out/libs/sapi/sapi_v0.5.2/soc/peripherals/src/sapi_uart.o
+                0x000000001a0014ac                uartTxWrite
  .text.uartInit
-                0x000000001a001440       0x7c _programs/tp-moto/out/libs/sapi/sapi_v0.5.2/soc/peripherals/src/sapi_uart.o
-                0x000000001a001440                uartInit
+                0x000000001a0014c0       0x7c _programs/tp-moto/out/libs/sapi/sapi_v0.5.2/soc/peripherals/src/sapi_uart.o
+                0x000000001a0014c0                uartInit
  .text.uartReadByte
-                0x000000001a0014bc       0x1e _programs/tp-moto/out/libs/sapi/sapi_v0.5.2/soc/peripherals/src/sapi_uart.o
-                0x000000001a0014bc                uartReadByte
- *fill*         0x000000001a0014da        0x2 ff
+                0x000000001a00153c       0x1e _programs/tp-moto/out/libs/sapi/sapi_v0.5.2/soc/peripherals/src/sapi_uart.o
+                0x000000001a00153c                uartReadByte
+ .text.uartWriteByte
+                0x000000001a00155a       0x1a _programs/tp-moto/out/libs/sapi/sapi_v0.5.2/soc/peripherals/src/sapi_uart.o
+                0x000000001a00155a                uartWriteByte
+ .text.uartWriteString
+                0x000000001a001574       0x18 _programs/tp-moto/out/libs/sapi/sapi_v0.5.2/soc/peripherals/src/sapi_uart.o
+                0x000000001a001574                uartWriteString
  .text.tickRead
-                0x000000001a0014dc        0xc _programs/tp-moto/out/libs/sapi/sapi_v0.5.2/soc/peripherals/src/sapi_tick.o
-                0x000000001a0014dc                tickRead
+                0x000000001a00158c        0xc _programs/tp-moto/out/libs/sapi/sapi_v0.5.2/soc/peripherals/src/sapi_tick.o
+                0x000000001a00158c                tickRead
  .text.tickPowerSet
-                0x000000001a0014e8       0x18 _programs/tp-moto/out/libs/sapi/sapi_v0.5.2/soc/peripherals/src/sapi_tick.o
-                0x000000001a0014e8                tickPowerSet
+                0x000000001a001598       0x18 _programs/tp-moto/out/libs/sapi/sapi_v0.5.2/soc/peripherals/src/sapi_tick.o
+                0x000000001a001598                tickPowerSet
  .text.tickInit
-                0x000000001a001500       0x7c _programs/tp-moto/out/libs/sapi/sapi_v0.5.2/soc/peripherals/src/sapi_tick.o
-                0x000000001a001500                tickInit
+                0x000000001a0015b0       0x7c _programs/tp-moto/out/libs/sapi/sapi_v0.5.2/soc/peripherals/src/sapi_tick.o
+                0x000000001a0015b0                tickInit
  .text.SysTick_Handler
-                0x000000001a00157c       0x34 _programs/tp-moto/out/libs/sapi/sapi_v0.5.2/soc/peripherals/src/sapi_tick.o
-                0x000000001a00157c                SysTick_Handler
+                0x000000001a00162c       0x34 _programs/tp-moto/out/libs/sapi/sapi_v0.5.2/soc/peripherals/src/sapi_tick.o
+                0x000000001a00162c                SysTick_Handler
  .text.gpioObtainPinInit
-                0x000000001a0015b0       0x34 _programs/tp-moto/out/libs/sapi/sapi_v0.5.2/soc/peripherals/src/sapi_gpio.o
+                0x000000001a001660       0x34 _programs/tp-moto/out/libs/sapi/sapi_v0.5.2/soc/peripherals/src/sapi_gpio.o
  .text.gpioInit
-                0x000000001a0015e4      0x1ac _programs/tp-moto/out/libs/sapi/sapi_v0.5.2/soc/peripherals/src/sapi_gpio.o
-                0x000000001a0015e4                gpioInit
+                0x000000001a001694      0x1ac _programs/tp-moto/out/libs/sapi/sapi_v0.5.2/soc/peripherals/src/sapi_gpio.o
+                0x000000001a001694                gpioInit
  .text.gpioWrite
-                0x000000001a001790       0x6a _programs/tp-moto/out/libs/sapi/sapi_v0.5.2/soc/peripherals/src/sapi_gpio.o
-                0x000000001a001790                gpioWrite
+                0x000000001a001840       0x6a _programs/tp-moto/out/libs/sapi/sapi_v0.5.2/soc/peripherals/src/sapi_gpio.o
+                0x000000001a001840                gpioWrite
  .text.gpioRead
-                0x000000001a0017fa       0x68 _programs/tp-moto/out/libs/sapi/sapi_v0.5.2/soc/peripherals/src/sapi_gpio.o
-                0x000000001a0017fa                gpioRead
- *fill*         0x000000001a001862        0x2 ff
+                0x000000001a0018aa       0x68 _programs/tp-moto/out/libs/sapi/sapi_v0.5.2/soc/peripherals/src/sapi_gpio.o
+                0x000000001a0018aa                gpioRead
+ *fill*         0x000000001a001912        0x2 ff
  .text.USB0_IRQHandler
-                0x000000001a001864       0x1c _programs/tp-moto/out/libs/sapi/sapi_v0.5.2/soc/peripherals/usb/device/src/sapi_usb_device.o
-                0x000000001a001864                USB0_IRQHandler
+                0x000000001a001914       0x1c _programs/tp-moto/out/libs/sapi/sapi_v0.5.2/soc/peripherals/usb/device/src/sapi_usb_device.o
+                0x000000001a001914                USB0_IRQHandler
  .text.boardInit
-                0x000000001a001880       0x74 _programs/tp-moto/out/libs/sapi/sapi_v0.5.2/board/src/sapi_board.o
-                0x000000001a001880                boardInit
- .text.delay    0x000000001a0018f4       0x38 _programs/tp-moto/out/libs/sapi/sapi_v0.5.2/abstract_modules/src/sapi_delay.o
-                0x000000001a0018f4                delay
+                0x000000001a001930       0x74 _programs/tp-moto/out/libs/sapi/sapi_v0.5.2/board/src/sapi_board.o
+                0x000000001a001930                boardInit
+ .text.delay    0x000000001a0019a4       0x38 _programs/tp-moto/out/libs/sapi/sapi_v0.5.2/abstract_modules/src/sapi_delay.o
+                0x000000001a0019a4                delay
  .text.delayInit
-                0x000000001a00192c       0x20 _programs/tp-moto/out/libs/sapi/sapi_v0.5.2/abstract_modules/src/sapi_delay.o
-                0x000000001a00192c                delayInit
+                0x000000001a0019dc       0x20 _programs/tp-moto/out/libs/sapi/sapi_v0.5.2/abstract_modules/src/sapi_delay.o
+                0x000000001a0019dc                delayInit
  .text.delayRead
-                0x000000001a00194c       0x42 _programs/tp-moto/out/libs/sapi/sapi_v0.5.2/abstract_modules/src/sapi_delay.o
-                0x000000001a00194c                delayRead
- *fill*         0x000000001a00198e        0x2 ff
- .text          0x000000001a001990       0x30 /home/nahuel/CIAA/gcc-arm-none-eabi-7-2018-q2-update/bin/../lib/gcc/arm-none-eabi/7.3.1/thumb/v7e-m/fpv4-sp/hard/libgcc.a(_aeabi_uldivmod.o)
-                0x000000001a001990                __aeabi_uldivmod
- .text          0x000000001a0019c0      0x2cc /home/nahuel/CIAA/gcc-arm-none-eabi-7-2018-q2-update/bin/../lib/gcc/arm-none-eabi/7.3.1/thumb/v7e-m/fpv4-sp/hard/libgcc.a(_udivmoddi4.o)
-                0x000000001a0019c0                __udivmoddi4
- .text          0x000000001a001c8c        0x4 /home/nahuel/CIAA/gcc-arm-none-eabi-7-2018-q2-update/bin/../lib/gcc/arm-none-eabi/7.3.1/thumb/v7e-m/fpv4-sp/hard/libgcc.a(_dvmd_tls.o)
-                0x000000001a001c8c                __aeabi_ldiv0
-                0x000000001a001c8c                __aeabi_idiv0
+                0x000000001a0019fc       0x42 _programs/tp-moto/out/libs/sapi/sapi_v0.5.2/abstract_modules/src/sapi_delay.o
+                0x000000001a0019fc                delayRead
+ *fill*         0x000000001a001a3e        0x2 ff
+ .text          0x000000001a001a40       0x30 /home/nahuel/CIAA/gcc-arm-none-eabi-7-2018-q2-update/bin/../lib/gcc/arm-none-eabi/7.3.1/thumb/v7e-m/fpv4-sp/hard/libgcc.a(_aeabi_uldivmod.o)
+                0x000000001a001a40                __aeabi_uldivmod
+ .text          0x000000001a001a70      0x2cc /home/nahuel/CIAA/gcc-arm-none-eabi-7-2018-q2-update/bin/../lib/gcc/arm-none-eabi/7.3.1/thumb/v7e-m/fpv4-sp/hard/libgcc.a(_udivmoddi4.o)
+                0x000000001a001a70                __udivmoddi4
+ .text          0x000000001a001d3c        0x4 /home/nahuel/CIAA/gcc-arm-none-eabi-7-2018-q2-update/bin/../lib/gcc/arm-none-eabi/7.3.1/thumb/v7e-m/fpv4-sp/hard/libgcc.a(_dvmd_tls.o)
+                0x000000001a001d3c                __aeabi_ldiv0
+                0x000000001a001d3c                __aeabi_idiv0
  .text.__libc_init_array
-                0x000000001a001c90       0x48 /home/nahuel/CIAA/gcc-arm-none-eabi-7-2018-q2-update/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a(lib_a-init.o)
-                0x000000001a001c90                __libc_init_array
- .text.memset   0x000000001a001cd8       0x10 /home/nahuel/CIAA/gcc-arm-none-eabi-7-2018-q2-update/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a(lib_a-memset.o)
-                0x000000001a001cd8                memset
+                0x000000001a001d40       0x48 /home/nahuel/CIAA/gcc-arm-none-eabi-7-2018-q2-update/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a(lib_a-init.o)
+                0x000000001a001d40                __libc_init_array
+ .text.memset   0x000000001a001d88       0x10 /home/nahuel/CIAA/gcc-arm-none-eabi-7-2018-q2-update/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a(lib_a-memset.o)
+                0x000000001a001d88                memset
  *(.rodata .rodata.* .constdata .constdata.*)
  .rodata.ArrancadorRemoto_initBt.str1.4
-                0x000000001a001ce8        0x3 _programs/tp-moto/out/_programs/tp-moto/src/ArrancadorRemoto.o
- *fill*         0x000000001a001ceb        0x1 ff
+                0x000000001a001d98        0x3 _programs/tp-moto/out/_programs/tp-moto/src/ArrancadorRemoto.o
+ *fill*         0x000000001a001d9b        0x1 ff
+ .rodata.modelChanged.str1.4
+                0x000000001a001d9c       0x10 _programs/tp-moto/out/_programs/tp-moto/src/main.o
  .rodata.ExtRateIn
-                0x000000001a001cec        0x4 _programs/tp-moto/out/libs/lpc_open/boards/edu_ciaa_nxp/src/board.o
-                0x000000001a001cec                ExtRateIn
+                0x000000001a001dac        0x4 _programs/tp-moto/out/libs/lpc_open/boards/edu_ciaa_nxp/src/board.o
+                0x000000001a001dac                ExtRateIn
  .rodata.GpioButtons
-                0x000000001a001cf0        0x8 _programs/tp-moto/out/libs/lpc_open/boards/edu_ciaa_nxp/src/board.o
+                0x000000001a001db0        0x8 _programs/tp-moto/out/libs/lpc_open/boards/edu_ciaa_nxp/src/board.o
  .rodata.GpioLeds
-                0x000000001a001cf8        0xc _programs/tp-moto/out/libs/lpc_open/boards/edu_ciaa_nxp/src/board.o
+                0x000000001a001db8        0xc _programs/tp-moto/out/libs/lpc_open/boards/edu_ciaa_nxp/src/board.o
  .rodata.GpioPorts
-                0x000000001a001d04       0x12 _programs/tp-moto/out/libs/lpc_open/boards/edu_ciaa_nxp/src/board.o
- *fill*         0x000000001a001d16        0x2 ff
+                0x000000001a001dc4       0x12 _programs/tp-moto/out/libs/lpc_open/boards/edu_ciaa_nxp/src/board.o
+ *fill*         0x000000001a001dd6        0x2 ff
  .rodata.OscRateIn
-                0x000000001a001d18        0x4 _programs/tp-moto/out/libs/lpc_open/boards/edu_ciaa_nxp/src/board.o
-                0x000000001a001d18                OscRateIn
+                0x000000001a001dd8        0x4 _programs/tp-moto/out/libs/lpc_open/boards/edu_ciaa_nxp/src/board.o
+                0x000000001a001dd8                OscRateIn
  .rodata.InitClkStates
-                0x000000001a001d1c        0x4 _programs/tp-moto/out/libs/lpc_open/boards/edu_ciaa_nxp/src/board_sysinit.o
+                0x000000001a001ddc        0x4 _programs/tp-moto/out/libs/lpc_open/boards/edu_ciaa_nxp/src/board_sysinit.o
  .rodata.pinmuxing
-                0x000000001a001d20       0x74 _programs/tp-moto/out/libs/lpc_open/boards/edu_ciaa_nxp/src/board_sysinit.o
+                0x000000001a001de0       0x74 _programs/tp-moto/out/libs/lpc_open/boards/edu_ciaa_nxp/src/board_sysinit.o
  .rodata.UART_BClock
-                0x000000001a001d94        0x8 _programs/tp-moto/out/libs/lpc_open/lpc_chip_43xx/src/uart_18xx_43xx.o
+                0x000000001a001e54        0x8 _programs/tp-moto/out/libs/lpc_open/lpc_chip_43xx/src/uart_18xx_43xx.o
  .rodata.UART_PClock
-                0x000000001a001d9c        0x8 _programs/tp-moto/out/libs/lpc_open/lpc_chip_43xx/src/uart_18xx_43xx.o
- .rodata        0x000000001a001da4        0x4 _programs/tp-moto/out/libs/lpc_open/lpc_chip_43xx/src/clock_18xx_43xx.o
+                0x000000001a001e5c        0x8 _programs/tp-moto/out/libs/lpc_open/lpc_chip_43xx/src/uart_18xx_43xx.o
+ .rodata        0x000000001a001e64        0x4 _programs/tp-moto/out/libs/lpc_open/lpc_chip_43xx/src/clock_18xx_43xx.o
  .rodata.Chip_Clock_SetDivider.str1.4
-                0x000000001a001da8        0x8 _programs/tp-moto/out/libs/lpc_open/lpc_chip_43xx/src/clock_18xx_43xx.o
+                0x000000001a001e68        0x8 _programs/tp-moto/out/libs/lpc_open/lpc_chip_43xx/src/clock_18xx_43xx.o
                                           0x6 (size before relaxing)
  .rodata.periph_to_base
-                0x000000001a001db0       0x6c _programs/tp-moto/out/libs/lpc_open/lpc_chip_43xx/src/clock_18xx_43xx.o
+                0x000000001a001e70       0x6c _programs/tp-moto/out/libs/lpc_open/lpc_chip_43xx/src/clock_18xx_43xx.o
  .rodata.InitClkStates
-                0x000000001a001e1c       0x48 _programs/tp-moto/out/libs/lpc_open/lpc_chip_43xx/src/sysinit_18xx_43xx.o
+                0x000000001a001edc       0x48 _programs/tp-moto/out/libs/lpc_open/lpc_chip_43xx/src/sysinit_18xx_43xx.o
  .rodata.lpcUarts
-                0x000000001a001e64       0x48 _programs/tp-moto/out/libs/sapi/sapi_v0.5.2/soc/peripherals/src/sapi_uart.o
+                0x000000001a001f24       0x48 _programs/tp-moto/out/libs/sapi/sapi_v0.5.2/soc/peripherals/src/sapi_uart.o
  .rodata.gpioPinsInit
-                0x000000001a001eac       0xe6 _programs/tp-moto/out/libs/sapi/sapi_v0.5.2/soc/peripherals/src/sapi_gpio.o
-                0x000000001a001eac                gpioPinsInit
-                0x000000001a001f94                . = ALIGN (0x4)
- *fill*         0x000000001a001f92        0x2 ff
+                0x000000001a001f6c       0xe6 _programs/tp-moto/out/libs/sapi/sapi_v0.5.2/soc/peripherals/src/sapi_gpio.o
+                0x000000001a001f6c                gpioPinsInit
+                0x000000001a002054                . = ALIGN (0x4)
+ *fill*         0x000000001a002052        0x2 ff
 
-.glue_7         0x000000001a001f94        0x0
- .glue_7        0x000000001a001f94        0x0 linker stubs
+.glue_7         0x000000001a002054        0x0
+ .glue_7        0x000000001a002054        0x0 linker stubs
 
-.glue_7t        0x000000001a001f94        0x0
- .glue_7t       0x000000001a001f94        0x0 linker stubs
+.glue_7t        0x000000001a002054        0x0
+ .glue_7t       0x000000001a002054        0x0 linker stubs
 
-.vfp11_veneer   0x000000001a001f94        0x0
- .vfp11_veneer  0x000000001a001f94        0x0 linker stubs
+.vfp11_veneer   0x000000001a002054        0x0
+ .vfp11_veneer  0x000000001a002054        0x0 linker stubs
 
-.v4_bx          0x000000001a001f94        0x0
- .v4_bx         0x000000001a001f94        0x0 linker stubs
+.v4_bx          0x000000001a002054        0x0
+ .v4_bx         0x000000001a002054        0x0 linker stubs
 
-.iplt           0x000000001a001f94        0x0
- .iplt          0x000000001a001f94        0x0 _programs/tp-moto/out/_programs/tp-moto/src/ArrancadorRemoto.o
-                0x000000001a001f94                . = ALIGN (0x4)
+.iplt           0x000000001a002054        0x0
+ .iplt          0x000000001a002054        0x0 _programs/tp-moto/out/_programs/tp-moto/src/ArrancadorRemoto.o
+                0x000000001a002054                . = ALIGN (0x4)
 
-.preinit_array  0x000000001a001f94        0x0
-                0x000000001a001f94                PROVIDE (__preinit_array_start = .)
+.preinit_array  0x000000001a002054        0x0
+                0x000000001a002054                PROVIDE (__preinit_array_start = .)
  *(.preinit_array*)
-                0x000000001a001f94                PROVIDE (__preinit_array_end = .)
+                0x000000001a002054                PROVIDE (__preinit_array_end = .)
 
-.init_array     0x000000001a001f94        0x4
-                0x000000001a001f94                PROVIDE (__init_array_start = .)
+.init_array     0x000000001a002054        0x4
+                0x000000001a002054                PROVIDE (__init_array_start = .)
  *(SORT_BY_NAME(.init_array.*))
  *(.init_array*)
- .init_array    0x000000001a001f94        0x4 _programs/tp-moto/out/libs/sys_newlib//src/system.o
-                0x000000001a001f98                PROVIDE (__init_array_end = .)
-                0x000000001a001f98                . = ALIGN (0x4)
+ .init_array    0x000000001a002054        0x4 _programs/tp-moto/out/libs/sys_newlib//src/system.o
+                0x000000001a002058                PROVIDE (__init_array_end = .)
+                0x000000001a002058                . = ALIGN (0x4)
 
 .ARM.extab
  *(.ARM.extab* .gnu.linkonce.armextab.*)
-                0x000000001a001f98                __exidx_start = .
+                0x000000001a002058                __exidx_start = .
 
-.ARM.exidx      0x000000001a001f98        0x8
+.ARM.exidx      0x000000001a002058        0x8
  *(.ARM.exidx* .gnu.linkonce.armexidx.*)
- .ARM.exidx     0x000000001a001f98        0x8 /home/nahuel/CIAA/gcc-arm-none-eabi-7-2018-q2-update/bin/../lib/gcc/arm-none-eabi/7.3.1/thumb/v7e-m/fpv4-sp/hard/libgcc.a(_udivmoddi4.o)
-                0x000000001a001fa0                __exidx_end = .
-                0x000000001a001fa0                _etext = .
+ .ARM.exidx     0x000000001a002058        0x8 /home/nahuel/CIAA/gcc-arm-none-eabi-7-2018-q2-update/bin/../lib/gcc/arm-none-eabi/7.3.1/thumb/v7e-m/fpv4-sp/hard/libgcc.a(_udivmoddi4.o)
+                0x000000001a002060                __exidx_end = .
+                0x000000001a002060                _etext = .
 
-.rel.dyn        0x000000001a001fa0        0x0
- .rel.iplt      0x000000001a001fa0        0x0 _programs/tp-moto/out/_programs/tp-moto/src/ArrancadorRemoto.o
+.rel.dyn        0x000000001a002060        0x0
+ .rel.iplt      0x000000001a002060        0x0 _programs/tp-moto/out/_programs/tp-moto/src/ArrancadorRemoto.o
 
-.data_RAM2      0x0000000010080000        0x0 load address 0x000000001a001fa0
+.data_RAM2      0x0000000010080000        0x0 load address 0x000000001a002060
  FILL mask 0xff
  *(.ramfunc.$RAM2)
  *(.ramfunc.$RamLoc40)
@@ -17634,7 +17645,7 @@ END GROUP
  *(.data.$RamLoc40*)
                 0x0000000010080000                . = ALIGN (0x4)
 
-.data_RAM3      0x0000000020000000        0x0 load address 0x000000001a001fa0
+.data_RAM3      0x0000000020000000        0x0 load address 0x000000001a002060
  FILL mask 0xff
  *(.ramfunc.$RAM3)
  *(.ramfunc.$RamAHB32)
@@ -17642,7 +17653,7 @@ END GROUP
  *(.data.$RamAHB32*)
                 0x0000000020000000                . = ALIGN (0x4)
 
-.data_RAM4      0x0000000020008000        0x0 load address 0x000000001a001fa0
+.data_RAM4      0x0000000020008000        0x0 load address 0x000000001a002060
  FILL mask 0xff
  *(.ramfunc.$RAM4)
  *(.ramfunc.$RamAHB16)
@@ -17650,7 +17661,7 @@ END GROUP
  *(.data.$RamAHB16*)
                 0x0000000020008000                . = ALIGN (0x4)
 
-.data_RAM5      0x000000002000c000        0x0 load address 0x000000001a001fa0
+.data_RAM5      0x000000002000c000        0x0 load address 0x000000001a002060
  FILL mask 0xff
  *(.ramfunc.$RAM5)
  *(.ramfunc.$RamAHB_ETB16)
@@ -17664,7 +17675,7 @@ END GROUP
                 0x0000000010000000                . = ALIGN (0x4)
                 0x0000000010000000                _end_uninit_RESERVED = .
 
-.data           0x0000000010000000       0x48 load address 0x000000001a001fa0
+.data           0x0000000010000000       0x48 load address 0x000000001a002060
  FILL mask 0xff
                 0x0000000010000000                _data = .
  *(vtable)
@@ -17680,7 +17691,7 @@ END GROUP
                 0x0000000010000048                . = ALIGN (0x4)
                 0x0000000010000048                _edata = .
 
-.igot.plt       0x0000000010000048        0x0 load address 0x000000001a001fe8
+.igot.plt       0x0000000010000048        0x0 load address 0x000000001a0020a8
  .igot.plt      0x0000000010000048        0x0 _programs/tp-moto/out/_programs/tp-moto/src/ArrancadorRemoto.o
 
 .bss_RAM2       0x0000000010080000        0x0
@@ -17752,95 +17763,95 @@ END GROUP
                 0x0000000010000070                _end_noinit = .
                 0x0000000010000070                PROVIDE (_pvHeapStart = .)
                 0x0000000010008000                PROVIDE (_vStackTop = (__top_RamLoc32 - 0x0))
-                0xffffffff53ff724e                PROVIDE (__valid_user_code_checksum = (0x0 - ((((((_vStackTop + (Reset_Handler + 0x1)) + (NMI_Handler + 0x1)) + (HardFault_Handler + 0x1)) + (DEFINED (MemManage_Handler)?MemManage_Handler:0x0 + 0x1)) + (DEFINED (BusFault_Handler)?BusFault_Handler:0x0 + 0x1)) + (DEFINED (UsageFault_Handler)?UsageFault_Handler:0x0 + 0x1))))
+                0xffffffff53ff71fa                PROVIDE (__valid_user_code_checksum = (0x0 - ((((((_vStackTop + (Reset_Handler + 0x1)) + (NMI_Handler + 0x1)) + (HardFault_Handler + 0x1)) + (DEFINED (MemManage_Handler)?MemManage_Handler:0x0 + 0x1)) + (DEFINED (BusFault_Handler)?BusFault_Handler:0x0 + 0x1)) + (DEFINED (UsageFault_Handler)?UsageFault_Handler:0x0 + 0x1))))
 OUTPUT(_programs/tp-moto/out/tp-moto.elf elf32-littlearm)
 
-.debug_info     0x0000000000000000    0x24a59
- .debug_info    0x0000000000000000     0x22f8 _programs/tp-moto/out/_programs/tp-moto/src/ArrancadorRemoto.o
- .debug_info    0x00000000000022f8     0x2275 _programs/tp-moto/out/_programs/tp-moto/src/pulsador.o
- .debug_info    0x000000000000456d     0x20bf _programs/tp-moto/out/_programs/tp-moto/src/Moto.o
- .debug_info    0x000000000000662c     0x21a2 _programs/tp-moto/out/_programs/tp-moto/src/MotoRender.o
- .debug_info    0x00000000000087ce     0x269f _programs/tp-moto/out/_programs/tp-moto/src/main.o
- .debug_info    0x000000000000ae6d     0x22b1 _programs/tp-moto/out/_programs/tp-moto/src/Button.o
- .debug_info    0x000000000000d11e      0x301 _programs/tp-moto/out/libs/cmsis_core//src/armv7m_startup.o
- .debug_info    0x000000000000d41f      0xf43 _programs/tp-moto/out/libs/sys_newlib//src/system.o
- .debug_info    0x000000000000e362     0x2144 _programs/tp-moto/out/libs/lpc_open/boards/edu_ciaa_nxp/src/board.o
- .debug_info    0x00000000000104a6     0x14c3 _programs/tp-moto/out/libs/lpc_open/boards/edu_ciaa_nxp/src/board_sysinit.o
- .debug_info    0x0000000000011969     0x164f _programs/tp-moto/out/libs/lpc_open/lpc_chip_43xx/src/uart_18xx_43xx.o
- .debug_info    0x0000000000012fb8     0x18ed _programs/tp-moto/out/libs/lpc_open/lpc_chip_43xx/src/clock_18xx_43xx.o
- .debug_info    0x00000000000148a5      0xc3d _programs/tp-moto/out/libs/lpc_open/lpc_chip_43xx/src/chip_18xx_43xx.o
- .debug_info    0x00000000000154e2      0xab0 _programs/tp-moto/out/libs/lpc_open/lpc_chip_43xx/src/sysinit_18xx_43xx.o
- .debug_info    0x0000000000015f92      0xaef _programs/tp-moto/out/libs/lpc_open/lpc_chip_43xx/src/adc_18xx_43xx.o
- .debug_info    0x0000000000016a81      0x219 _programs/tp-moto/out/libs/lpc_open/lpc_chip_43xx/src/gpio_18xx_43xx.o
- .debug_info    0x0000000000016c9a     0x1606 _programs/tp-moto/out/libs/lpc_open/lpc_chip_43xx/src/ssp_18xx_43xx.o
- .debug_info    0x00000000000182a0     0x1366 _programs/tp-moto/out/libs/lpc_open/lpc_chip_43xx/src/i2c_18xx_43xx.o
- .debug_info    0x0000000000019606       0x3f _programs/tp-moto/out/libs/lpc_open/lpc_startup/src/crp.o
- .debug_info    0x0000000000019645      0xbbd _programs/tp-moto/out/libs/lpc_open/lpc_startup/src/sysinit.o
- .debug_info    0x000000000001a202       0x74 _programs/tp-moto/out/libs/lpc_open/lpc_startup/src/vendor_interrupt.o
- .debug_info    0x000000000001a276      0xeaf _programs/tp-moto/out/libs/sapi/sapi_v0.5.2/soc/core/src/sapi_cyclesCounter.o
- .debug_info    0x000000000001b125     0x1ffd _programs/tp-moto/out/libs/sapi/sapi_v0.5.2/soc/peripherals/src/sapi_uart.o
- .debug_info    0x000000000001d122     0x14a2 _programs/tp-moto/out/libs/sapi/sapi_v0.5.2/soc/peripherals/src/sapi_tick.o
- .debug_info    0x000000000001e5c4     0x1a45 _programs/tp-moto/out/libs/sapi/sapi_v0.5.2/soc/peripherals/src/sapi_gpio.o
- .debug_info    0x0000000000020009     0x330e _programs/tp-moto/out/libs/sapi/sapi_v0.5.2/soc/peripherals/usb/device/src/sapi_usb_device.o
- .debug_info    0x0000000000023317      0xbce _programs/tp-moto/out/libs/sapi/sapi_v0.5.2/board/src/sapi_board.o
- .debug_info    0x0000000000023ee5      0xb74 _programs/tp-moto/out/libs/sapi/sapi_v0.5.2/abstract_modules/src/sapi_delay.o
+.debug_info     0x0000000000000000    0x24b1f
+ .debug_info    0x0000000000000000     0x22f3 _programs/tp-moto/out/_programs/tp-moto/src/ArrancadorRemoto.o
+ .debug_info    0x00000000000022f3     0x2270 _programs/tp-moto/out/_programs/tp-moto/src/pulsador.o
+ .debug_info    0x0000000000004563     0x20ba _programs/tp-moto/out/_programs/tp-moto/src/Moto.o
+ .debug_info    0x000000000000661d     0x218c _programs/tp-moto/out/_programs/tp-moto/src/MotoRender.o
+ .debug_info    0x00000000000087a9     0x278a _programs/tp-moto/out/_programs/tp-moto/src/main.o
+ .debug_info    0x000000000000af33     0x22b1 _programs/tp-moto/out/_programs/tp-moto/src/Button.o
+ .debug_info    0x000000000000d1e4      0x301 _programs/tp-moto/out/libs/cmsis_core//src/armv7m_startup.o
+ .debug_info    0x000000000000d4e5      0xf43 _programs/tp-moto/out/libs/sys_newlib//src/system.o
+ .debug_info    0x000000000000e428     0x2144 _programs/tp-moto/out/libs/lpc_open/boards/edu_ciaa_nxp/src/board.o
+ .debug_info    0x000000000001056c     0x14c3 _programs/tp-moto/out/libs/lpc_open/boards/edu_ciaa_nxp/src/board_sysinit.o
+ .debug_info    0x0000000000011a2f     0x164f _programs/tp-moto/out/libs/lpc_open/lpc_chip_43xx/src/uart_18xx_43xx.o
+ .debug_info    0x000000000001307e     0x18ed _programs/tp-moto/out/libs/lpc_open/lpc_chip_43xx/src/clock_18xx_43xx.o
+ .debug_info    0x000000000001496b      0xc3d _programs/tp-moto/out/libs/lpc_open/lpc_chip_43xx/src/chip_18xx_43xx.o
+ .debug_info    0x00000000000155a8      0xab0 _programs/tp-moto/out/libs/lpc_open/lpc_chip_43xx/src/sysinit_18xx_43xx.o
+ .debug_info    0x0000000000016058      0xaef _programs/tp-moto/out/libs/lpc_open/lpc_chip_43xx/src/adc_18xx_43xx.o
+ .debug_info    0x0000000000016b47      0x219 _programs/tp-moto/out/libs/lpc_open/lpc_chip_43xx/src/gpio_18xx_43xx.o
+ .debug_info    0x0000000000016d60     0x1606 _programs/tp-moto/out/libs/lpc_open/lpc_chip_43xx/src/ssp_18xx_43xx.o
+ .debug_info    0x0000000000018366     0x1366 _programs/tp-moto/out/libs/lpc_open/lpc_chip_43xx/src/i2c_18xx_43xx.o
+ .debug_info    0x00000000000196cc       0x3f _programs/tp-moto/out/libs/lpc_open/lpc_startup/src/crp.o
+ .debug_info    0x000000000001970b      0xbbd _programs/tp-moto/out/libs/lpc_open/lpc_startup/src/sysinit.o
+ .debug_info    0x000000000001a2c8       0x74 _programs/tp-moto/out/libs/lpc_open/lpc_startup/src/vendor_interrupt.o
+ .debug_info    0x000000000001a33c      0xeaf _programs/tp-moto/out/libs/sapi/sapi_v0.5.2/soc/core/src/sapi_cyclesCounter.o
+ .debug_info    0x000000000001b1eb     0x1ffd _programs/tp-moto/out/libs/sapi/sapi_v0.5.2/soc/peripherals/src/sapi_uart.o
+ .debug_info    0x000000000001d1e8     0x14a2 _programs/tp-moto/out/libs/sapi/sapi_v0.5.2/soc/peripherals/src/sapi_tick.o
+ .debug_info    0x000000000001e68a     0x1a45 _programs/tp-moto/out/libs/sapi/sapi_v0.5.2/soc/peripherals/src/sapi_gpio.o
+ .debug_info    0x00000000000200cf     0x330e _programs/tp-moto/out/libs/sapi/sapi_v0.5.2/soc/peripherals/usb/device/src/sapi_usb_device.o
+ .debug_info    0x00000000000233dd      0xbce _programs/tp-moto/out/libs/sapi/sapi_v0.5.2/board/src/sapi_board.o
+ .debug_info    0x0000000000023fab      0xb74 _programs/tp-moto/out/libs/sapi/sapi_v0.5.2/abstract_modules/src/sapi_delay.o
 
-.debug_abbrev   0x0000000000000000     0x48c3
+.debug_abbrev   0x0000000000000000     0x48e2
  .debug_abbrev  0x0000000000000000      0x325 _programs/tp-moto/out/_programs/tp-moto/src/ArrancadorRemoto.o
  .debug_abbrev  0x0000000000000325      0x2d6 _programs/tp-moto/out/_programs/tp-moto/src/pulsador.o
  .debug_abbrev  0x00000000000005fb      0x2ab _programs/tp-moto/out/_programs/tp-moto/src/Moto.o
  .debug_abbrev  0x00000000000008a6      0x2b8 _programs/tp-moto/out/_programs/tp-moto/src/MotoRender.o
- .debug_abbrev  0x0000000000000b5e      0x2f2 _programs/tp-moto/out/_programs/tp-moto/src/main.o
- .debug_abbrev  0x0000000000000e50      0x2c3 _programs/tp-moto/out/_programs/tp-moto/src/Button.o
- .debug_abbrev  0x0000000000001113      0x10d _programs/tp-moto/out/libs/cmsis_core//src/armv7m_startup.o
- .debug_abbrev  0x0000000000001220      0x2b7 _programs/tp-moto/out/libs/sys_newlib//src/system.o
- .debug_abbrev  0x00000000000014d7      0x47e _programs/tp-moto/out/libs/lpc_open/boards/edu_ciaa_nxp/src/board.o
- .debug_abbrev  0x0000000000001955      0x2f8 _programs/tp-moto/out/libs/lpc_open/boards/edu_ciaa_nxp/src/board_sysinit.o
- .debug_abbrev  0x0000000000001c4d      0x3b7 _programs/tp-moto/out/libs/lpc_open/lpc_chip_43xx/src/uart_18xx_43xx.o
- .debug_abbrev  0x0000000000002004      0x379 _programs/tp-moto/out/libs/lpc_open/lpc_chip_43xx/src/clock_18xx_43xx.o
- .debug_abbrev  0x000000000000237d      0x1c3 _programs/tp-moto/out/libs/lpc_open/lpc_chip_43xx/src/chip_18xx_43xx.o
- .debug_abbrev  0x0000000000002540      0x203 _programs/tp-moto/out/libs/lpc_open/lpc_chip_43xx/src/sysinit_18xx_43xx.o
- .debug_abbrev  0x0000000000002743      0x1f9 _programs/tp-moto/out/libs/lpc_open/lpc_chip_43xx/src/adc_18xx_43xx.o
- .debug_abbrev  0x000000000000293c      0x100 _programs/tp-moto/out/libs/lpc_open/lpc_chip_43xx/src/gpio_18xx_43xx.o
- .debug_abbrev  0x0000000000002a3c      0x352 _programs/tp-moto/out/libs/lpc_open/lpc_chip_43xx/src/ssp_18xx_43xx.o
- .debug_abbrev  0x0000000000002d8e      0x344 _programs/tp-moto/out/libs/lpc_open/lpc_chip_43xx/src/i2c_18xx_43xx.o
- .debug_abbrev  0x00000000000030d2       0x36 _programs/tp-moto/out/libs/lpc_open/lpc_startup/src/crp.o
- .debug_abbrev  0x0000000000003108      0x221 _programs/tp-moto/out/libs/lpc_open/lpc_startup/src/sysinit.o
- .debug_abbrev  0x0000000000003329       0x74 _programs/tp-moto/out/libs/lpc_open/lpc_startup/src/vendor_interrupt.o
- .debug_abbrev  0x000000000000339d      0x232 _programs/tp-moto/out/libs/sapi/sapi_v0.5.2/soc/core/src/sapi_cyclesCounter.o
- .debug_abbrev  0x00000000000035cf      0x3e2 _programs/tp-moto/out/libs/sapi/sapi_v0.5.2/soc/peripherals/src/sapi_uart.o
- .debug_abbrev  0x00000000000039b1      0x368 _programs/tp-moto/out/libs/sapi/sapi_v0.5.2/soc/peripherals/src/sapi_tick.o
- .debug_abbrev  0x0000000000003d19      0x369 _programs/tp-moto/out/libs/sapi/sapi_v0.5.2/soc/peripherals/src/sapi_gpio.o
- .debug_abbrev  0x0000000000004082      0x3d9 _programs/tp-moto/out/libs/sapi/sapi_v0.5.2/soc/peripherals/usb/device/src/sapi_usb_device.o
- .debug_abbrev  0x000000000000445b      0x216 _programs/tp-moto/out/libs/sapi/sapi_v0.5.2/board/src/sapi_board.o
- .debug_abbrev  0x0000000000004671      0x252 _programs/tp-moto/out/libs/sapi/sapi_v0.5.2/abstract_modules/src/sapi_delay.o
+ .debug_abbrev  0x0000000000000b5e      0x311 _programs/tp-moto/out/_programs/tp-moto/src/main.o
+ .debug_abbrev  0x0000000000000e6f      0x2c3 _programs/tp-moto/out/_programs/tp-moto/src/Button.o
+ .debug_abbrev  0x0000000000001132      0x10d _programs/tp-moto/out/libs/cmsis_core//src/armv7m_startup.o
+ .debug_abbrev  0x000000000000123f      0x2b7 _programs/tp-moto/out/libs/sys_newlib//src/system.o
+ .debug_abbrev  0x00000000000014f6      0x47e _programs/tp-moto/out/libs/lpc_open/boards/edu_ciaa_nxp/src/board.o
+ .debug_abbrev  0x0000000000001974      0x2f8 _programs/tp-moto/out/libs/lpc_open/boards/edu_ciaa_nxp/src/board_sysinit.o
+ .debug_abbrev  0x0000000000001c6c      0x3b7 _programs/tp-moto/out/libs/lpc_open/lpc_chip_43xx/src/uart_18xx_43xx.o
+ .debug_abbrev  0x0000000000002023      0x379 _programs/tp-moto/out/libs/lpc_open/lpc_chip_43xx/src/clock_18xx_43xx.o
+ .debug_abbrev  0x000000000000239c      0x1c3 _programs/tp-moto/out/libs/lpc_open/lpc_chip_43xx/src/chip_18xx_43xx.o
+ .debug_abbrev  0x000000000000255f      0x203 _programs/tp-moto/out/libs/lpc_open/lpc_chip_43xx/src/sysinit_18xx_43xx.o
+ .debug_abbrev  0x0000000000002762      0x1f9 _programs/tp-moto/out/libs/lpc_open/lpc_chip_43xx/src/adc_18xx_43xx.o
+ .debug_abbrev  0x000000000000295b      0x100 _programs/tp-moto/out/libs/lpc_open/lpc_chip_43xx/src/gpio_18xx_43xx.o
+ .debug_abbrev  0x0000000000002a5b      0x352 _programs/tp-moto/out/libs/lpc_open/lpc_chip_43xx/src/ssp_18xx_43xx.o
+ .debug_abbrev  0x0000000000002dad      0x344 _programs/tp-moto/out/libs/lpc_open/lpc_chip_43xx/src/i2c_18xx_43xx.o
+ .debug_abbrev  0x00000000000030f1       0x36 _programs/tp-moto/out/libs/lpc_open/lpc_startup/src/crp.o
+ .debug_abbrev  0x0000000000003127      0x221 _programs/tp-moto/out/libs/lpc_open/lpc_startup/src/sysinit.o
+ .debug_abbrev  0x0000000000003348       0x74 _programs/tp-moto/out/libs/lpc_open/lpc_startup/src/vendor_interrupt.o
+ .debug_abbrev  0x00000000000033bc      0x232 _programs/tp-moto/out/libs/sapi/sapi_v0.5.2/soc/core/src/sapi_cyclesCounter.o
+ .debug_abbrev  0x00000000000035ee      0x3e2 _programs/tp-moto/out/libs/sapi/sapi_v0.5.2/soc/peripherals/src/sapi_uart.o
+ .debug_abbrev  0x00000000000039d0      0x368 _programs/tp-moto/out/libs/sapi/sapi_v0.5.2/soc/peripherals/src/sapi_tick.o
+ .debug_abbrev  0x0000000000003d38      0x369 _programs/tp-moto/out/libs/sapi/sapi_v0.5.2/soc/peripherals/src/sapi_gpio.o
+ .debug_abbrev  0x00000000000040a1      0x3d9 _programs/tp-moto/out/libs/sapi/sapi_v0.5.2/soc/peripherals/usb/device/src/sapi_usb_device.o
+ .debug_abbrev  0x000000000000447a      0x216 _programs/tp-moto/out/libs/sapi/sapi_v0.5.2/board/src/sapi_board.o
+ .debug_abbrev  0x0000000000004690      0x252 _programs/tp-moto/out/libs/sapi/sapi_v0.5.2/abstract_modules/src/sapi_delay.o
 
-.debug_loc      0x0000000000000000     0x70d6
+.debug_loc      0x0000000000000000     0x7133
  .debug_loc     0x0000000000000000      0x278 _programs/tp-moto/out/_programs/tp-moto/src/ArrancadorRemoto.o
  .debug_loc     0x0000000000000278      0x12d _programs/tp-moto/out/_programs/tp-moto/src/pulsador.o
  .debug_loc     0x00000000000003a5       0xd1 _programs/tp-moto/out/_programs/tp-moto/src/Moto.o
  .debug_loc     0x0000000000000476       0x1e _programs/tp-moto/out/_programs/tp-moto/src/MotoRender.o
- .debug_loc     0x0000000000000494       0x81 _programs/tp-moto/out/_programs/tp-moto/src/main.o
- .debug_loc     0x0000000000000515      0x123 _programs/tp-moto/out/_programs/tp-moto/src/Button.o
- .debug_loc     0x0000000000000638      0x206 _programs/tp-moto/out/libs/cmsis_core//src/armv7m_startup.o
- .debug_loc     0x000000000000083e      0x586 _programs/tp-moto/out/libs/sys_newlib//src/system.o
- .debug_loc     0x0000000000000dc4      0x5b0 _programs/tp-moto/out/libs/lpc_open/boards/edu_ciaa_nxp/src/board.o
- .debug_loc     0x0000000000001374       0xf5 _programs/tp-moto/out/libs/lpc_open/boards/edu_ciaa_nxp/src/board_sysinit.o
- .debug_loc     0x0000000000001469      0xd25 _programs/tp-moto/out/libs/lpc_open/lpc_chip_43xx/src/uart_18xx_43xx.o
- .debug_loc     0x000000000000218e     0x123c _programs/tp-moto/out/libs/lpc_open/lpc_chip_43xx/src/clock_18xx_43xx.o
- .debug_loc     0x00000000000033ca      0x1b5 _programs/tp-moto/out/libs/lpc_open/lpc_chip_43xx/src/sysinit_18xx_43xx.o
- .debug_loc     0x000000000000357f      0x67e _programs/tp-moto/out/libs/lpc_open/lpc_chip_43xx/src/adc_18xx_43xx.o
- .debug_loc     0x0000000000003bfd      0xd56 _programs/tp-moto/out/libs/lpc_open/lpc_chip_43xx/src/ssp_18xx_43xx.o
- .debug_loc     0x0000000000004953      0xc9a _programs/tp-moto/out/libs/lpc_open/lpc_chip_43xx/src/i2c_18xx_43xx.o
- .debug_loc     0x00000000000055ed       0x13 _programs/tp-moto/out/libs/lpc_open/lpc_startup/src/sysinit.o
- .debug_loc     0x0000000000005600       0xed _programs/tp-moto/out/libs/sapi/sapi_v0.5.2/soc/core/src/sapi_cyclesCounter.o
- .debug_loc     0x00000000000056ed      0xaad _programs/tp-moto/out/libs/sapi/sapi_v0.5.2/soc/peripherals/src/sapi_uart.o
- .debug_loc     0x000000000000619a      0x173 _programs/tp-moto/out/libs/sapi/sapi_v0.5.2/soc/peripherals/src/sapi_tick.o
- .debug_loc     0x000000000000630d      0x8a3 _programs/tp-moto/out/libs/sapi/sapi_v0.5.2/soc/peripherals/src/sapi_gpio.o
- .debug_loc     0x0000000000006bb0      0x34f _programs/tp-moto/out/libs/sapi/sapi_v0.5.2/soc/peripherals/usb/device/src/sapi_usb_device.o
- .debug_loc     0x0000000000006eff      0x1d7 _programs/tp-moto/out/libs/sapi/sapi_v0.5.2/abstract_modules/src/sapi_delay.o
+ .debug_loc     0x0000000000000494       0xde _programs/tp-moto/out/_programs/tp-moto/src/main.o
+ .debug_loc     0x0000000000000572      0x123 _programs/tp-moto/out/_programs/tp-moto/src/Button.o
+ .debug_loc     0x0000000000000695      0x206 _programs/tp-moto/out/libs/cmsis_core//src/armv7m_startup.o
+ .debug_loc     0x000000000000089b      0x586 _programs/tp-moto/out/libs/sys_newlib//src/system.o
+ .debug_loc     0x0000000000000e21      0x5b0 _programs/tp-moto/out/libs/lpc_open/boards/edu_ciaa_nxp/src/board.o
+ .debug_loc     0x00000000000013d1       0xf5 _programs/tp-moto/out/libs/lpc_open/boards/edu_ciaa_nxp/src/board_sysinit.o
+ .debug_loc     0x00000000000014c6      0xd25 _programs/tp-moto/out/libs/lpc_open/lpc_chip_43xx/src/uart_18xx_43xx.o
+ .debug_loc     0x00000000000021eb     0x123c _programs/tp-moto/out/libs/lpc_open/lpc_chip_43xx/src/clock_18xx_43xx.o
+ .debug_loc     0x0000000000003427      0x1b5 _programs/tp-moto/out/libs/lpc_open/lpc_chip_43xx/src/sysinit_18xx_43xx.o
+ .debug_loc     0x00000000000035dc      0x67e _programs/tp-moto/out/libs/lpc_open/lpc_chip_43xx/src/adc_18xx_43xx.o
+ .debug_loc     0x0000000000003c5a      0xd56 _programs/tp-moto/out/libs/lpc_open/lpc_chip_43xx/src/ssp_18xx_43xx.o
+ .debug_loc     0x00000000000049b0      0xc9a _programs/tp-moto/out/libs/lpc_open/lpc_chip_43xx/src/i2c_18xx_43xx.o
+ .debug_loc     0x000000000000564a       0x13 _programs/tp-moto/out/libs/lpc_open/lpc_startup/src/sysinit.o
+ .debug_loc     0x000000000000565d       0xed _programs/tp-moto/out/libs/sapi/sapi_v0.5.2/soc/core/src/sapi_cyclesCounter.o
+ .debug_loc     0x000000000000574a      0xaad _programs/tp-moto/out/libs/sapi/sapi_v0.5.2/soc/peripherals/src/sapi_uart.o
+ .debug_loc     0x00000000000061f7      0x173 _programs/tp-moto/out/libs/sapi/sapi_v0.5.2/soc/peripherals/src/sapi_tick.o
+ .debug_loc     0x000000000000636a      0x8a3 _programs/tp-moto/out/libs/sapi/sapi_v0.5.2/soc/peripherals/src/sapi_gpio.o
+ .debug_loc     0x0000000000006c0d      0x34f _programs/tp-moto/out/libs/sapi/sapi_v0.5.2/soc/peripherals/usb/device/src/sapi_usb_device.o
+ .debug_loc     0x0000000000006f5c      0x1d7 _programs/tp-moto/out/libs/sapi/sapi_v0.5.2/abstract_modules/src/sapi_delay.o
 
-.debug_aranges  0x0000000000000000      0xaa0
+.debug_aranges  0x0000000000000000      0xaa8
  .debug_aranges
                 0x0000000000000000       0x48 _programs/tp-moto/out/_programs/tp-moto/src/ArrancadorRemoto.o
  .debug_aranges
@@ -17850,82 +17861,82 @@ OUTPUT(_programs/tp-moto/out/tp-moto.elf elf32-littlearm)
  .debug_aranges
                 0x00000000000000c8       0x28 _programs/tp-moto/out/_programs/tp-moto/src/MotoRender.o
  .debug_aranges
-                0x00000000000000f0       0x48 _programs/tp-moto/out/_programs/tp-moto/src/main.o
+                0x00000000000000f0       0x50 _programs/tp-moto/out/_programs/tp-moto/src/main.o
  .debug_aranges
-                0x0000000000000138       0x38 _programs/tp-moto/out/_programs/tp-moto/src/Button.o
+                0x0000000000000140       0x38 _programs/tp-moto/out/_programs/tp-moto/src/Button.o
  .debug_aranges
-                0x0000000000000170       0x90 _programs/tp-moto/out/libs/cmsis_core//src/armv7m_startup.o
+                0x0000000000000178       0x90 _programs/tp-moto/out/libs/cmsis_core//src/armv7m_startup.o
  .debug_aranges
-                0x0000000000000200       0xe0 _programs/tp-moto/out/libs/sys_newlib//src/system.o
+                0x0000000000000208       0xe0 _programs/tp-moto/out/libs/sys_newlib//src/system.o
  .debug_aranges
-                0x00000000000002e0       0xc0 _programs/tp-moto/out/libs/lpc_open/boards/edu_ciaa_nxp/src/board.o
+                0x00000000000002e8       0xc0 _programs/tp-moto/out/libs/lpc_open/boards/edu_ciaa_nxp/src/board.o
  .debug_aranges
-                0x00000000000003a0       0x30 _programs/tp-moto/out/libs/lpc_open/boards/edu_ciaa_nxp/src/board_sysinit.o
+                0x00000000000003a8       0x30 _programs/tp-moto/out/libs/lpc_open/boards/edu_ciaa_nxp/src/board_sysinit.o
  .debug_aranges
-                0x00000000000003d0       0xa8 _programs/tp-moto/out/libs/lpc_open/lpc_chip_43xx/src/uart_18xx_43xx.o
+                0x00000000000003d8       0xa8 _programs/tp-moto/out/libs/lpc_open/lpc_chip_43xx/src/uart_18xx_43xx.o
  .debug_aranges
-                0x0000000000000478      0x128 _programs/tp-moto/out/libs/lpc_open/lpc_chip_43xx/src/clock_18xx_43xx.o
+                0x0000000000000480      0x128 _programs/tp-moto/out/libs/lpc_open/lpc_chip_43xx/src/clock_18xx_43xx.o
  .debug_aranges
-                0x00000000000005a0       0x38 _programs/tp-moto/out/libs/lpc_open/lpc_chip_43xx/src/chip_18xx_43xx.o
+                0x00000000000005a8       0x38 _programs/tp-moto/out/libs/lpc_open/lpc_chip_43xx/src/chip_18xx_43xx.o
  .debug_aranges
-                0x00000000000005d8       0x38 _programs/tp-moto/out/libs/lpc_open/lpc_chip_43xx/src/sysinit_18xx_43xx.o
+                0x00000000000005e0       0x38 _programs/tp-moto/out/libs/lpc_open/lpc_chip_43xx/src/sysinit_18xx_43xx.o
  .debug_aranges
-                0x0000000000000610       0x90 _programs/tp-moto/out/libs/lpc_open/lpc_chip_43xx/src/adc_18xx_43xx.o
+                0x0000000000000618       0x90 _programs/tp-moto/out/libs/lpc_open/lpc_chip_43xx/src/adc_18xx_43xx.o
  .debug_aranges
-                0x00000000000006a0       0x28 _programs/tp-moto/out/libs/lpc_open/lpc_chip_43xx/src/gpio_18xx_43xx.o
+                0x00000000000006a8       0x28 _programs/tp-moto/out/libs/lpc_open/lpc_chip_43xx/src/gpio_18xx_43xx.o
  .debug_aranges
-                0x00000000000006c8       0xa0 _programs/tp-moto/out/libs/lpc_open/lpc_chip_43xx/src/ssp_18xx_43xx.o
+                0x00000000000006d0       0xa0 _programs/tp-moto/out/libs/lpc_open/lpc_chip_43xx/src/ssp_18xx_43xx.o
  .debug_aranges
-                0x0000000000000768       0xd8 _programs/tp-moto/out/libs/lpc_open/lpc_chip_43xx/src/i2c_18xx_43xx.o
+                0x0000000000000770       0xd8 _programs/tp-moto/out/libs/lpc_open/lpc_chip_43xx/src/i2c_18xx_43xx.o
  .debug_aranges
-                0x0000000000000840       0x18 _programs/tp-moto/out/libs/lpc_open/lpc_startup/src/crp.o
+                0x0000000000000848       0x18 _programs/tp-moto/out/libs/lpc_open/lpc_startup/src/crp.o
  .debug_aranges
-                0x0000000000000858       0x20 _programs/tp-moto/out/libs/lpc_open/lpc_startup/src/sysinit.o
+                0x0000000000000860       0x20 _programs/tp-moto/out/libs/lpc_open/lpc_startup/src/sysinit.o
  .debug_aranges
-                0x0000000000000878       0x20 _programs/tp-moto/out/libs/lpc_open/lpc_startup/src/vendor_interrupt.o
+                0x0000000000000880       0x20 _programs/tp-moto/out/libs/lpc_open/lpc_startup/src/vendor_interrupt.o
  .debug_aranges
-                0x0000000000000898       0x38 _programs/tp-moto/out/libs/sapi/sapi_v0.5.2/soc/core/src/sapi_cyclesCounter.o
+                0x00000000000008a0       0x38 _programs/tp-moto/out/libs/sapi/sapi_v0.5.2/soc/core/src/sapi_cyclesCounter.o
  .debug_aranges
-                0x00000000000008d0       0x88 _programs/tp-moto/out/libs/sapi/sapi_v0.5.2/soc/peripherals/src/sapi_uart.o
+                0x00000000000008d8       0x88 _programs/tp-moto/out/libs/sapi/sapi_v0.5.2/soc/peripherals/src/sapi_uart.o
  .debug_aranges
-                0x0000000000000958       0x48 _programs/tp-moto/out/libs/sapi/sapi_v0.5.2/soc/peripherals/src/sapi_tick.o
+                0x0000000000000960       0x48 _programs/tp-moto/out/libs/sapi/sapi_v0.5.2/soc/peripherals/src/sapi_tick.o
  .debug_aranges
-                0x00000000000009a0       0x40 _programs/tp-moto/out/libs/sapi/sapi_v0.5.2/soc/peripherals/src/sapi_gpio.o
+                0x00000000000009a8       0x40 _programs/tp-moto/out/libs/sapi/sapi_v0.5.2/soc/peripherals/src/sapi_gpio.o
  .debug_aranges
-                0x00000000000009e0       0x50 _programs/tp-moto/out/libs/sapi/sapi_v0.5.2/soc/peripherals/usb/device/src/sapi_usb_device.o
+                0x00000000000009e8       0x50 _programs/tp-moto/out/libs/sapi/sapi_v0.5.2/soc/peripherals/usb/device/src/sapi_usb_device.o
  .debug_aranges
-                0x0000000000000a30       0x20 _programs/tp-moto/out/libs/sapi/sapi_v0.5.2/board/src/sapi_board.o
+                0x0000000000000a38       0x20 _programs/tp-moto/out/libs/sapi/sapi_v0.5.2/board/src/sapi_board.o
  .debug_aranges
-                0x0000000000000a50       0x50 _programs/tp-moto/out/libs/sapi/sapi_v0.5.2/abstract_modules/src/sapi_delay.o
+                0x0000000000000a58       0x50 _programs/tp-moto/out/libs/sapi/sapi_v0.5.2/abstract_modules/src/sapi_delay.o
 
-.debug_ranges   0x0000000000000000      0xa10
+.debug_ranges   0x0000000000000000      0xa30
  .debug_ranges  0x0000000000000000       0x38 _programs/tp-moto/out/_programs/tp-moto/src/ArrancadorRemoto.o
  .debug_ranges  0x0000000000000038       0x20 _programs/tp-moto/out/_programs/tp-moto/src/pulsador.o
  .debug_ranges  0x0000000000000058       0x40 _programs/tp-moto/out/_programs/tp-moto/src/Moto.o
  .debug_ranges  0x0000000000000098       0x18 _programs/tp-moto/out/_programs/tp-moto/src/MotoRender.o
- .debug_ranges  0x00000000000000b0       0x38 _programs/tp-moto/out/_programs/tp-moto/src/main.o
- .debug_ranges  0x00000000000000e8       0x28 _programs/tp-moto/out/_programs/tp-moto/src/Button.o
- .debug_ranges  0x0000000000000110       0x80 _programs/tp-moto/out/libs/cmsis_core//src/armv7m_startup.o
- .debug_ranges  0x0000000000000190       0xd0 _programs/tp-moto/out/libs/sys_newlib//src/system.o
- .debug_ranges  0x0000000000000260       0xf8 _programs/tp-moto/out/libs/lpc_open/boards/edu_ciaa_nxp/src/board.o
- .debug_ranges  0x0000000000000358       0x50 _programs/tp-moto/out/libs/lpc_open/boards/edu_ciaa_nxp/src/board_sysinit.o
- .debug_ranges  0x00000000000003a8       0xb0 _programs/tp-moto/out/libs/lpc_open/lpc_chip_43xx/src/uart_18xx_43xx.o
- .debug_ranges  0x0000000000000458      0x190 _programs/tp-moto/out/libs/lpc_open/lpc_chip_43xx/src/clock_18xx_43xx.o
- .debug_ranges  0x00000000000005e8       0x28 _programs/tp-moto/out/libs/lpc_open/lpc_chip_43xx/src/chip_18xx_43xx.o
- .debug_ranges  0x0000000000000610       0x28 _programs/tp-moto/out/libs/lpc_open/lpc_chip_43xx/src/sysinit_18xx_43xx.o
- .debug_ranges  0x0000000000000638       0x80 _programs/tp-moto/out/libs/lpc_open/lpc_chip_43xx/src/adc_18xx_43xx.o
- .debug_ranges  0x00000000000006b8       0x18 _programs/tp-moto/out/libs/lpc_open/lpc_chip_43xx/src/gpio_18xx_43xx.o
- .debug_ranges  0x00000000000006d0       0xc0 _programs/tp-moto/out/libs/lpc_open/lpc_chip_43xx/src/ssp_18xx_43xx.o
- .debug_ranges  0x0000000000000790       0xc8 _programs/tp-moto/out/libs/lpc_open/lpc_chip_43xx/src/i2c_18xx_43xx.o
- .debug_ranges  0x0000000000000858       0x10 _programs/tp-moto/out/libs/lpc_open/lpc_startup/src/sysinit.o
- .debug_ranges  0x0000000000000868       0x10 _programs/tp-moto/out/libs/lpc_open/lpc_startup/src/vendor_interrupt.o
- .debug_ranges  0x0000000000000878       0x28 _programs/tp-moto/out/libs/sapi/sapi_v0.5.2/soc/core/src/sapi_cyclesCounter.o
- .debug_ranges  0x00000000000008a0       0x78 _programs/tp-moto/out/libs/sapi/sapi_v0.5.2/soc/peripherals/src/sapi_uart.o
- .debug_ranges  0x0000000000000918       0x38 _programs/tp-moto/out/libs/sapi/sapi_v0.5.2/soc/peripherals/src/sapi_tick.o
- .debug_ranges  0x0000000000000950       0x30 _programs/tp-moto/out/libs/sapi/sapi_v0.5.2/soc/peripherals/src/sapi_gpio.o
- .debug_ranges  0x0000000000000980       0x40 _programs/tp-moto/out/libs/sapi/sapi_v0.5.2/soc/peripherals/usb/device/src/sapi_usb_device.o
- .debug_ranges  0x00000000000009c0       0x10 _programs/tp-moto/out/libs/sapi/sapi_v0.5.2/board/src/sapi_board.o
- .debug_ranges  0x00000000000009d0       0x40 _programs/tp-moto/out/libs/sapi/sapi_v0.5.2/abstract_modules/src/sapi_delay.o
+ .debug_ranges  0x00000000000000b0       0x58 _programs/tp-moto/out/_programs/tp-moto/src/main.o
+ .debug_ranges  0x0000000000000108       0x28 _programs/tp-moto/out/_programs/tp-moto/src/Button.o
+ .debug_ranges  0x0000000000000130       0x80 _programs/tp-moto/out/libs/cmsis_core//src/armv7m_startup.o
+ .debug_ranges  0x00000000000001b0       0xd0 _programs/tp-moto/out/libs/sys_newlib//src/system.o
+ .debug_ranges  0x0000000000000280       0xf8 _programs/tp-moto/out/libs/lpc_open/boards/edu_ciaa_nxp/src/board.o
+ .debug_ranges  0x0000000000000378       0x50 _programs/tp-moto/out/libs/lpc_open/boards/edu_ciaa_nxp/src/board_sysinit.o
+ .debug_ranges  0x00000000000003c8       0xb0 _programs/tp-moto/out/libs/lpc_open/lpc_chip_43xx/src/uart_18xx_43xx.o
+ .debug_ranges  0x0000000000000478      0x190 _programs/tp-moto/out/libs/lpc_open/lpc_chip_43xx/src/clock_18xx_43xx.o
+ .debug_ranges  0x0000000000000608       0x28 _programs/tp-moto/out/libs/lpc_open/lpc_chip_43xx/src/chip_18xx_43xx.o
+ .debug_ranges  0x0000000000000630       0x28 _programs/tp-moto/out/libs/lpc_open/lpc_chip_43xx/src/sysinit_18xx_43xx.o
+ .debug_ranges  0x0000000000000658       0x80 _programs/tp-moto/out/libs/lpc_open/lpc_chip_43xx/src/adc_18xx_43xx.o
+ .debug_ranges  0x00000000000006d8       0x18 _programs/tp-moto/out/libs/lpc_open/lpc_chip_43xx/src/gpio_18xx_43xx.o
+ .debug_ranges  0x00000000000006f0       0xc0 _programs/tp-moto/out/libs/lpc_open/lpc_chip_43xx/src/ssp_18xx_43xx.o
+ .debug_ranges  0x00000000000007b0       0xc8 _programs/tp-moto/out/libs/lpc_open/lpc_chip_43xx/src/i2c_18xx_43xx.o
+ .debug_ranges  0x0000000000000878       0x10 _programs/tp-moto/out/libs/lpc_open/lpc_startup/src/sysinit.o
+ .debug_ranges  0x0000000000000888       0x10 _programs/tp-moto/out/libs/lpc_open/lpc_startup/src/vendor_interrupt.o
+ .debug_ranges  0x0000000000000898       0x28 _programs/tp-moto/out/libs/sapi/sapi_v0.5.2/soc/core/src/sapi_cyclesCounter.o
+ .debug_ranges  0x00000000000008c0       0x78 _programs/tp-moto/out/libs/sapi/sapi_v0.5.2/soc/peripherals/src/sapi_uart.o
+ .debug_ranges  0x0000000000000938       0x38 _programs/tp-moto/out/libs/sapi/sapi_v0.5.2/soc/peripherals/src/sapi_tick.o
+ .debug_ranges  0x0000000000000970       0x30 _programs/tp-moto/out/libs/sapi/sapi_v0.5.2/soc/peripherals/src/sapi_gpio.o
+ .debug_ranges  0x00000000000009a0       0x40 _programs/tp-moto/out/libs/sapi/sapi_v0.5.2/soc/peripherals/usb/device/src/sapi_usb_device.o
+ .debug_ranges  0x00000000000009e0       0x10 _programs/tp-moto/out/libs/sapi/sapi_v0.5.2/board/src/sapi_board.o
+ .debug_ranges  0x00000000000009f0       0x40 _programs/tp-moto/out/libs/sapi/sapi_v0.5.2/abstract_modules/src/sapi_delay.o
 
 .debug_macro    0x0000000000000000     0xe281
  .debug_macro   0x0000000000000000      0x6a6 _programs/tp-moto/out/_programs/tp-moto/src/ArrancadorRemoto.o
@@ -18086,92 +18097,92 @@ OUTPUT(_programs/tp-moto/out/tp-moto.elf elf32-littlearm)
  .debug_macro   0x000000000000dd2c      0x477 _programs/tp-moto/out/libs/sapi/sapi_v0.5.2/abstract_modules/src/sapi_delay.o
  .debug_macro   0x000000000000e1a3       0xde _programs/tp-moto/out/libs/sapi/sapi_v0.5.2/abstract_modules/src/sapi_delay.o
 
-.debug_line     0x0000000000000000    0x11338
+.debug_line     0x0000000000000000    0x1134c
  .debug_line    0x0000000000000000     0x10aa _programs/tp-moto/out/_programs/tp-moto/src/ArrancadorRemoto.o
  .debug_line    0x00000000000010aa     0x1069 _programs/tp-moto/out/_programs/tp-moto/src/pulsador.o
  .debug_line    0x0000000000002113     0x1085 _programs/tp-moto/out/_programs/tp-moto/src/Moto.o
  .debug_line    0x0000000000003198     0x103e _programs/tp-moto/out/_programs/tp-moto/src/MotoRender.o
- .debug_line    0x00000000000041d6     0x1101 _programs/tp-moto/out/_programs/tp-moto/src/main.o
- .debug_line    0x00000000000052d7     0x1069 _programs/tp-moto/out/_programs/tp-moto/src/Button.o
- .debug_line    0x0000000000006340       0xfa _programs/tp-moto/out/libs/cmsis_core//src/armv7m_startup.o
- .debug_line    0x000000000000643a      0x4aa _programs/tp-moto/out/libs/sys_newlib//src/system.o
- .debug_line    0x00000000000068e4      0xa70 _programs/tp-moto/out/libs/lpc_open/boards/edu_ciaa_nxp/src/board.o
- .debug_line    0x0000000000007354      0x872 _programs/tp-moto/out/libs/lpc_open/boards/edu_ciaa_nxp/src/board_sysinit.o
- .debug_line    0x0000000000007bc6      0x9e1 _programs/tp-moto/out/libs/lpc_open/lpc_chip_43xx/src/uart_18xx_43xx.o
- .debug_line    0x00000000000085a7      0xb39 _programs/tp-moto/out/libs/lpc_open/lpc_chip_43xx/src/clock_18xx_43xx.o
- .debug_line    0x00000000000090e0      0x743 _programs/tp-moto/out/libs/lpc_open/lpc_chip_43xx/src/chip_18xx_43xx.o
- .debug_line    0x0000000000009823      0x7a0 _programs/tp-moto/out/libs/lpc_open/lpc_chip_43xx/src/sysinit_18xx_43xx.o
- .debug_line    0x0000000000009fc3      0x828 _programs/tp-moto/out/libs/lpc_open/lpc_chip_43xx/src/adc_18xx_43xx.o
- .debug_line    0x000000000000a7eb      0x701 _programs/tp-moto/out/libs/lpc_open/lpc_chip_43xx/src/gpio_18xx_43xx.o
- .debug_line    0x000000000000aeec      0xb8b _programs/tp-moto/out/libs/lpc_open/lpc_chip_43xx/src/ssp_18xx_43xx.o
- .debug_line    0x000000000000ba77      0x9e6 _programs/tp-moto/out/libs/lpc_open/lpc_chip_43xx/src/i2c_18xx_43xx.o
- .debug_line    0x000000000000c45d       0x44 _programs/tp-moto/out/libs/lpc_open/lpc_startup/src/crp.o
- .debug_line    0x000000000000c4a1      0x80f _programs/tp-moto/out/libs/lpc_open/lpc_startup/src/sysinit.o
- .debug_line    0x000000000000ccb0       0x61 _programs/tp-moto/out/libs/lpc_open/lpc_startup/src/vendor_interrupt.o
- .debug_line    0x000000000000cd11      0x8ea _programs/tp-moto/out/libs/sapi/sapi_v0.5.2/soc/core/src/sapi_cyclesCounter.o
- .debug_line    0x000000000000d5fb      0xb5f _programs/tp-moto/out/libs/sapi/sapi_v0.5.2/soc/peripherals/src/sapi_uart.o
- .debug_line    0x000000000000e15a      0x999 _programs/tp-moto/out/libs/sapi/sapi_v0.5.2/soc/peripherals/src/sapi_tick.o
- .debug_line    0x000000000000eaf3      0x9e9 _programs/tp-moto/out/libs/sapi/sapi_v0.5.2/soc/peripherals/src/sapi_gpio.o
- .debug_line    0x000000000000f4dc      0xb64 _programs/tp-moto/out/libs/sapi/sapi_v0.5.2/soc/peripherals/usb/device/src/sapi_usb_device.o
- .debug_line    0x0000000000010040      0x926 _programs/tp-moto/out/libs/sapi/sapi_v0.5.2/board/src/sapi_board.o
- .debug_line    0x0000000000010966      0x9d2 _programs/tp-moto/out/libs/sapi/sapi_v0.5.2/abstract_modules/src/sapi_delay.o
+ .debug_line    0x00000000000041d6     0x1115 _programs/tp-moto/out/_programs/tp-moto/src/main.o
+ .debug_line    0x00000000000052eb     0x1069 _programs/tp-moto/out/_programs/tp-moto/src/Button.o
+ .debug_line    0x0000000000006354       0xfa _programs/tp-moto/out/libs/cmsis_core//src/armv7m_startup.o
+ .debug_line    0x000000000000644e      0x4aa _programs/tp-moto/out/libs/sys_newlib//src/system.o
+ .debug_line    0x00000000000068f8      0xa70 _programs/tp-moto/out/libs/lpc_open/boards/edu_ciaa_nxp/src/board.o
+ .debug_line    0x0000000000007368      0x872 _programs/tp-moto/out/libs/lpc_open/boards/edu_ciaa_nxp/src/board_sysinit.o
+ .debug_line    0x0000000000007bda      0x9e1 _programs/tp-moto/out/libs/lpc_open/lpc_chip_43xx/src/uart_18xx_43xx.o
+ .debug_line    0x00000000000085bb      0xb39 _programs/tp-moto/out/libs/lpc_open/lpc_chip_43xx/src/clock_18xx_43xx.o
+ .debug_line    0x00000000000090f4      0x743 _programs/tp-moto/out/libs/lpc_open/lpc_chip_43xx/src/chip_18xx_43xx.o
+ .debug_line    0x0000000000009837      0x7a0 _programs/tp-moto/out/libs/lpc_open/lpc_chip_43xx/src/sysinit_18xx_43xx.o
+ .debug_line    0x0000000000009fd7      0x828 _programs/tp-moto/out/libs/lpc_open/lpc_chip_43xx/src/adc_18xx_43xx.o
+ .debug_line    0x000000000000a7ff      0x701 _programs/tp-moto/out/libs/lpc_open/lpc_chip_43xx/src/gpio_18xx_43xx.o
+ .debug_line    0x000000000000af00      0xb8b _programs/tp-moto/out/libs/lpc_open/lpc_chip_43xx/src/ssp_18xx_43xx.o
+ .debug_line    0x000000000000ba8b      0x9e6 _programs/tp-moto/out/libs/lpc_open/lpc_chip_43xx/src/i2c_18xx_43xx.o
+ .debug_line    0x000000000000c471       0x44 _programs/tp-moto/out/libs/lpc_open/lpc_startup/src/crp.o
+ .debug_line    0x000000000000c4b5      0x80f _programs/tp-moto/out/libs/lpc_open/lpc_startup/src/sysinit.o
+ .debug_line    0x000000000000ccc4       0x61 _programs/tp-moto/out/libs/lpc_open/lpc_startup/src/vendor_interrupt.o
+ .debug_line    0x000000000000cd25      0x8ea _programs/tp-moto/out/libs/sapi/sapi_v0.5.2/soc/core/src/sapi_cyclesCounter.o
+ .debug_line    0x000000000000d60f      0xb5f _programs/tp-moto/out/libs/sapi/sapi_v0.5.2/soc/peripherals/src/sapi_uart.o
+ .debug_line    0x000000000000e16e      0x999 _programs/tp-moto/out/libs/sapi/sapi_v0.5.2/soc/peripherals/src/sapi_tick.o
+ .debug_line    0x000000000000eb07      0x9e9 _programs/tp-moto/out/libs/sapi/sapi_v0.5.2/soc/peripherals/src/sapi_gpio.o
+ .debug_line    0x000000000000f4f0      0xb64 _programs/tp-moto/out/libs/sapi/sapi_v0.5.2/soc/peripherals/usb/device/src/sapi_usb_device.o
+ .debug_line    0x0000000000010054      0x926 _programs/tp-moto/out/libs/sapi/sapi_v0.5.2/board/src/sapi_board.o
+ .debug_line    0x000000000001097a      0x9d2 _programs/tp-moto/out/libs/sapi/sapi_v0.5.2/abstract_modules/src/sapi_delay.o
 
-.debug_str      0x0000000000000000    0x27fe4
- .debug_str     0x0000000000000000    0x22a83 _programs/tp-moto/out/_programs/tp-moto/src/ArrancadorRemoto.o
-                                      0x22e4d (size before relaxing)
- .debug_str     0x0000000000022a83      0x23b _programs/tp-moto/out/_programs/tp-moto/src/pulsador.o
+.debug_str      0x0000000000000000    0x28007
+ .debug_str     0x0000000000000000    0x22a84 _programs/tp-moto/out/_programs/tp-moto/src/ArrancadorRemoto.o
+                                      0x22e4e (size before relaxing)
+ .debug_str     0x0000000000022a84      0x23b _programs/tp-moto/out/_programs/tp-moto/src/pulsador.o
                                       0x22f28 (size before relaxing)
- .debug_str     0x0000000000022cbe       0x84 _programs/tp-moto/out/_programs/tp-moto/src/Moto.o
+ .debug_str     0x0000000000022cbf       0x84 _programs/tp-moto/out/_programs/tp-moto/src/Moto.o
                                       0x22d05 (size before relaxing)
- .debug_str     0x0000000000022d42       0x74 _programs/tp-moto/out/_programs/tp-moto/src/MotoRender.o
+ .debug_str     0x0000000000022d43       0x74 _programs/tp-moto/out/_programs/tp-moto/src/MotoRender.o
                                       0x22e77 (size before relaxing)
- .debug_str     0x0000000000022db6      0x1fe _programs/tp-moto/out/_programs/tp-moto/src/main.o
-                                      0x2321a (size before relaxing)
- .debug_str     0x0000000000022fb4       0x5b _programs/tp-moto/out/_programs/tp-moto/src/Button.o
+ .debug_str     0x0000000000022db7      0x220 _programs/tp-moto/out/_programs/tp-moto/src/main.o
+                                      0x2326f (size before relaxing)
+ .debug_str     0x0000000000022fd7       0x5b _programs/tp-moto/out/_programs/tp-moto/src/Button.o
                                       0x22e4d (size before relaxing)
- .debug_str     0x000000000002300f      0x212 _programs/tp-moto/out/libs/cmsis_core//src/armv7m_startup.o
+ .debug_str     0x0000000000023032      0x212 _programs/tp-moto/out/libs/cmsis_core//src/armv7m_startup.o
                                        0x2f4a (size before relaxing)
- .debug_str     0x0000000000023221      0x894 _programs/tp-moto/out/libs/sys_newlib//src/system.o
+ .debug_str     0x0000000000023244      0x894 _programs/tp-moto/out/libs/sys_newlib//src/system.o
                                        0x6bad (size before relaxing)
- .debug_str     0x0000000000023ab5     0x13ca _programs/tp-moto/out/libs/lpc_open/boards/edu_ciaa_nxp/src/board.o
+ .debug_str     0x0000000000023ad8     0x13ca _programs/tp-moto/out/libs/lpc_open/boards/edu_ciaa_nxp/src/board.o
                                       0x1b620 (size before relaxing)
- .debug_str     0x0000000000024e7f      0x352 _programs/tp-moto/out/libs/lpc_open/boards/edu_ciaa_nxp/src/board_sysinit.o
+ .debug_str     0x0000000000024ea2      0x352 _programs/tp-moto/out/libs/lpc_open/boards/edu_ciaa_nxp/src/board_sysinit.o
                                       0x1af9b (size before relaxing)
- .debug_str     0x00000000000251d1      0x3cf _programs/tp-moto/out/libs/lpc_open/lpc_chip_43xx/src/uart_18xx_43xx.o
+ .debug_str     0x00000000000251f4      0x3cf _programs/tp-moto/out/libs/lpc_open/lpc_chip_43xx/src/uart_18xx_43xx.o
                                       0x17691 (size before relaxing)
- .debug_str     0x00000000000255a0      0x5d1 _programs/tp-moto/out/libs/lpc_open/lpc_chip_43xx/src/clock_18xx_43xx.o
+ .debug_str     0x00000000000255c3      0x5d1 _programs/tp-moto/out/libs/lpc_open/lpc_chip_43xx/src/clock_18xx_43xx.o
                                       0x17a54 (size before relaxing)
- .debug_str     0x0000000000025b71       0x76 _programs/tp-moto/out/libs/lpc_open/lpc_chip_43xx/src/chip_18xx_43xx.o
+ .debug_str     0x0000000000025b94       0x76 _programs/tp-moto/out/libs/lpc_open/lpc_chip_43xx/src/chip_18xx_43xx.o
                                       0x17581 (size before relaxing)
- .debug_str     0x0000000000025be7       0xbc _programs/tp-moto/out/libs/lpc_open/lpc_chip_43xx/src/sysinit_18xx_43xx.o
+ .debug_str     0x0000000000025c0a       0xbc _programs/tp-moto/out/libs/lpc_open/lpc_chip_43xx/src/sysinit_18xx_43xx.o
                                       0x174e2 (size before relaxing)
- .debug_str     0x0000000000025ca3      0x14a _programs/tp-moto/out/libs/lpc_open/lpc_chip_43xx/src/adc_18xx_43xx.o
+ .debug_str     0x0000000000025cc6      0x14a _programs/tp-moto/out/libs/lpc_open/lpc_chip_43xx/src/adc_18xx_43xx.o
                                       0x1702c (size before relaxing)
- .debug_str     0x0000000000025ded       0x42 _programs/tp-moto/out/libs/lpc_open/lpc_chip_43xx/src/gpio_18xx_43xx.o
+ .debug_str     0x0000000000025e10       0x42 _programs/tp-moto/out/libs/lpc_open/lpc_chip_43xx/src/gpio_18xx_43xx.o
                                       0x167e3 (size before relaxing)
- .debug_str     0x0000000000025e2f      0x3e8 _programs/tp-moto/out/libs/lpc_open/lpc_chip_43xx/src/ssp_18xx_43xx.o
+ .debug_str     0x0000000000025e52      0x3e8 _programs/tp-moto/out/libs/lpc_open/lpc_chip_43xx/src/ssp_18xx_43xx.o
                                       0x17222 (size before relaxing)
- .debug_str     0x0000000000026217      0x584 _programs/tp-moto/out/libs/lpc_open/lpc_chip_43xx/src/i2c_18xx_43xx.o
+ .debug_str     0x000000000002623a      0x584 _programs/tp-moto/out/libs/lpc_open/lpc_chip_43xx/src/i2c_18xx_43xx.o
                                       0x177c3 (size before relaxing)
- .debug_str     0x000000000002679b       0x43 _programs/tp-moto/out/libs/lpc_open/lpc_startup/src/crp.o
+ .debug_str     0x00000000000267be       0x43 _programs/tp-moto/out/libs/lpc_open/lpc_startup/src/crp.o
                                        0x2d4a (size before relaxing)
- .debug_str     0x00000000000267de       0xb9 _programs/tp-moto/out/libs/lpc_open/lpc_startup/src/sysinit.o
+ .debug_str     0x0000000000026801       0xb9 _programs/tp-moto/out/libs/lpc_open/lpc_startup/src/sysinit.o
                                       0x1a26d (size before relaxing)
- .debug_str     0x0000000000026897       0x56 _programs/tp-moto/out/libs/lpc_open/lpc_startup/src/vendor_interrupt.o
+ .debug_str     0x00000000000268ba       0x56 _programs/tp-moto/out/libs/lpc_open/lpc_startup/src/vendor_interrupt.o
                                        0x2da5 (size before relaxing)
- .debug_str     0x00000000000268ed       0xc6 _programs/tp-moto/out/libs/sapi/sapi_v0.5.2/soc/core/src/sapi_cyclesCounter.o
+ .debug_str     0x0000000000026910       0xc6 _programs/tp-moto/out/libs/sapi/sapi_v0.5.2/soc/core/src/sapi_cyclesCounter.o
                                       0x1af8f (size before relaxing)
- .debug_str     0x00000000000269b3      0x6a4 _programs/tp-moto/out/libs/sapi/sapi_v0.5.2/soc/peripherals/src/sapi_uart.o
+ .debug_str     0x00000000000269d6      0x6a4 _programs/tp-moto/out/libs/sapi/sapi_v0.5.2/soc/peripherals/src/sapi_uart.o
                                       0x1b9cd (size before relaxing)
- .debug_str     0x0000000000027057      0x174 _programs/tp-moto/out/libs/sapi/sapi_v0.5.2/soc/peripherals/src/sapi_tick.o
+ .debug_str     0x000000000002707a      0x174 _programs/tp-moto/out/libs/sapi/sapi_v0.5.2/soc/peripherals/src/sapi_tick.o
                                       0x1b46b (size before relaxing)
- .debug_str     0x00000000000271cb      0x114 _programs/tp-moto/out/libs/sapi/sapi_v0.5.2/soc/peripherals/src/sapi_gpio.o
+ .debug_str     0x00000000000271ee      0x114 _programs/tp-moto/out/libs/sapi/sapi_v0.5.2/soc/peripherals/src/sapi_gpio.o
                                       0x1b29a (size before relaxing)
- .debug_str     0x00000000000272df      0x765 _programs/tp-moto/out/libs/sapi/sapi_v0.5.2/soc/peripherals/usb/device/src/sapi_usb_device.o
+ .debug_str     0x0000000000027302      0x765 _programs/tp-moto/out/libs/sapi/sapi_v0.5.2/soc/peripherals/usb/device/src/sapi_usb_device.o
                                       0x2111b (size before relaxing)
- .debug_str     0x0000000000027a44       0x2d _programs/tp-moto/out/libs/sapi/sapi_v0.5.2/board/src/sapi_board.o
+ .debug_str     0x0000000000027a67       0x2d _programs/tp-moto/out/libs/sapi/sapi_v0.5.2/board/src/sapi_board.o
                                       0x1a7bc (size before relaxing)
- .debug_str     0x0000000000027a71      0x573 _programs/tp-moto/out/libs/sapi/sapi_v0.5.2/abstract_modules/src/sapi_delay.o
+ .debug_str     0x0000000000027a94      0x573 _programs/tp-moto/out/libs/sapi/sapi_v0.5.2/abstract_modules/src/sapi_delay.o
                                       0x1ab2d (size before relaxing)
 
 .comment        0x0000000000000000       0x7f
@@ -18274,38 +18285,38 @@ OUTPUT(_programs/tp-moto/out/tp-moto.elf elf32-littlearm)
  .ARM.attributes
                 0x00000000000006e8       0x34 /home/nahuel/CIAA/gcc-arm-none-eabi-7-2018-q2-update/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a(lib_a-memset.o)
 
-.debug_frame    0x0000000000000000     0x1994
+.debug_frame    0x0000000000000000     0x19ac
  .debug_frame   0x0000000000000000       0xa8 _programs/tp-moto/out/_programs/tp-moto/src/ArrancadorRemoto.o
  .debug_frame   0x00000000000000a8       0x5c _programs/tp-moto/out/_programs/tp-moto/src/pulsador.o
  .debug_frame   0x0000000000000104       0x98 _programs/tp-moto/out/_programs/tp-moto/src/Moto.o
  .debug_frame   0x000000000000019c       0x3c _programs/tp-moto/out/_programs/tp-moto/src/MotoRender.o
- .debug_frame   0x00000000000001d8       0x88 _programs/tp-moto/out/_programs/tp-moto/src/main.o
- .debug_frame   0x0000000000000260       0x64 _programs/tp-moto/out/_programs/tp-moto/src/Button.o
- .debug_frame   0x00000000000002c4      0x114 _programs/tp-moto/out/libs/cmsis_core//src/armv7m_startup.o
- .debug_frame   0x00000000000003d8      0x1d8 _programs/tp-moto/out/libs/sys_newlib//src/system.o
- .debug_frame   0x00000000000005b0      0x204 _programs/tp-moto/out/libs/lpc_open/boards/edu_ciaa_nxp/src/board.o
- .debug_frame   0x00000000000007b4       0x5c _programs/tp-moto/out/libs/lpc_open/boards/edu_ciaa_nxp/src/board_sysinit.o
- .debug_frame   0x0000000000000810      0x1f4 _programs/tp-moto/out/libs/lpc_open/lpc_chip_43xx/src/uart_18xx_43xx.o
- .debug_frame   0x0000000000000a04      0x318 _programs/tp-moto/out/libs/lpc_open/lpc_chip_43xx/src/clock_18xx_43xx.o
- .debug_frame   0x0000000000000d1c       0x70 _programs/tp-moto/out/libs/lpc_open/lpc_chip_43xx/src/chip_18xx_43xx.o
- .debug_frame   0x0000000000000d8c       0x7c _programs/tp-moto/out/libs/lpc_open/lpc_chip_43xx/src/sysinit_18xx_43xx.o
- .debug_frame   0x0000000000000e08      0x160 _programs/tp-moto/out/libs/lpc_open/lpc_chip_43xx/src/adc_18xx_43xx.o
- .debug_frame   0x0000000000000f68       0x30 _programs/tp-moto/out/libs/lpc_open/lpc_chip_43xx/src/gpio_18xx_43xx.o
- .debug_frame   0x0000000000000f98      0x198 _programs/tp-moto/out/libs/lpc_open/lpc_chip_43xx/src/ssp_18xx_43xx.o
- .debug_frame   0x0000000000001130      0x270 _programs/tp-moto/out/libs/lpc_open/lpc_chip_43xx/src/i2c_18xx_43xx.o
- .debug_frame   0x00000000000013a0       0x28 _programs/tp-moto/out/libs/lpc_open/lpc_startup/src/sysinit.o
- .debug_frame   0x00000000000013c8       0x20 _programs/tp-moto/out/libs/lpc_open/lpc_startup/src/vendor_interrupt.o
- .debug_frame   0x00000000000013e8       0x74 _programs/tp-moto/out/libs/sapi/sapi_v0.5.2/soc/core/src/sapi_cyclesCounter.o
- .debug_frame   0x000000000000145c      0x190 _programs/tp-moto/out/libs/sapi/sapi_v0.5.2/soc/peripherals/src/sapi_uart.o
- .debug_frame   0x00000000000015ec       0x84 _programs/tp-moto/out/libs/sapi/sapi_v0.5.2/soc/peripherals/src/sapi_tick.o
- .debug_frame   0x0000000000001670       0xb4 _programs/tp-moto/out/libs/sapi/sapi_v0.5.2/soc/peripherals/src/sapi_gpio.o
- .debug_frame   0x0000000000001724       0xb8 _programs/tp-moto/out/libs/sapi/sapi_v0.5.2/soc/peripherals/usb/device/src/sapi_usb_device.o
- .debug_frame   0x00000000000017dc       0x28 _programs/tp-moto/out/libs/sapi/sapi_v0.5.2/board/src/sapi_board.o
- .debug_frame   0x0000000000001804       0xe4 _programs/tp-moto/out/libs/sapi/sapi_v0.5.2/abstract_modules/src/sapi_delay.o
- .debug_frame   0x00000000000018e8       0x2c /home/nahuel/CIAA/gcc-arm-none-eabi-7-2018-q2-update/bin/../lib/gcc/arm-none-eabi/7.3.1/thumb/v7e-m/fpv4-sp/hard/libgcc.a(_aeabi_uldivmod.o)
- .debug_frame   0x0000000000001914       0x34 /home/nahuel/CIAA/gcc-arm-none-eabi-7-2018-q2-update/bin/../lib/gcc/arm-none-eabi/7.3.1/thumb/v7e-m/fpv4-sp/hard/libgcc.a(_udivmoddi4.o)
- .debug_frame   0x0000000000001948       0x2c /home/nahuel/CIAA/gcc-arm-none-eabi-7-2018-q2-update/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a(lib_a-init.o)
- .debug_frame   0x0000000000001974       0x20 /home/nahuel/CIAA/gcc-arm-none-eabi-7-2018-q2-update/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a(lib_a-memset.o)
+ .debug_frame   0x00000000000001d8       0xa0 _programs/tp-moto/out/_programs/tp-moto/src/main.o
+ .debug_frame   0x0000000000000278       0x64 _programs/tp-moto/out/_programs/tp-moto/src/Button.o
+ .debug_frame   0x00000000000002dc      0x114 _programs/tp-moto/out/libs/cmsis_core//src/armv7m_startup.o
+ .debug_frame   0x00000000000003f0      0x1d8 _programs/tp-moto/out/libs/sys_newlib//src/system.o
+ .debug_frame   0x00000000000005c8      0x204 _programs/tp-moto/out/libs/lpc_open/boards/edu_ciaa_nxp/src/board.o
+ .debug_frame   0x00000000000007cc       0x5c _programs/tp-moto/out/libs/lpc_open/boards/edu_ciaa_nxp/src/board_sysinit.o
+ .debug_frame   0x0000000000000828      0x1f4 _programs/tp-moto/out/libs/lpc_open/lpc_chip_43xx/src/uart_18xx_43xx.o
+ .debug_frame   0x0000000000000a1c      0x318 _programs/tp-moto/out/libs/lpc_open/lpc_chip_43xx/src/clock_18xx_43xx.o
+ .debug_frame   0x0000000000000d34       0x70 _programs/tp-moto/out/libs/lpc_open/lpc_chip_43xx/src/chip_18xx_43xx.o
+ .debug_frame   0x0000000000000da4       0x7c _programs/tp-moto/out/libs/lpc_open/lpc_chip_43xx/src/sysinit_18xx_43xx.o
+ .debug_frame   0x0000000000000e20      0x160 _programs/tp-moto/out/libs/lpc_open/lpc_chip_43xx/src/adc_18xx_43xx.o
+ .debug_frame   0x0000000000000f80       0x30 _programs/tp-moto/out/libs/lpc_open/lpc_chip_43xx/src/gpio_18xx_43xx.o
+ .debug_frame   0x0000000000000fb0      0x198 _programs/tp-moto/out/libs/lpc_open/lpc_chip_43xx/src/ssp_18xx_43xx.o
+ .debug_frame   0x0000000000001148      0x270 _programs/tp-moto/out/libs/lpc_open/lpc_chip_43xx/src/i2c_18xx_43xx.o
+ .debug_frame   0x00000000000013b8       0x28 _programs/tp-moto/out/libs/lpc_open/lpc_startup/src/sysinit.o
+ .debug_frame   0x00000000000013e0       0x20 _programs/tp-moto/out/libs/lpc_open/lpc_startup/src/vendor_interrupt.o
+ .debug_frame   0x0000000000001400       0x74 _programs/tp-moto/out/libs/sapi/sapi_v0.5.2/soc/core/src/sapi_cyclesCounter.o
+ .debug_frame   0x0000000000001474      0x190 _programs/tp-moto/out/libs/sapi/sapi_v0.5.2/soc/peripherals/src/sapi_uart.o
+ .debug_frame   0x0000000000001604       0x84 _programs/tp-moto/out/libs/sapi/sapi_v0.5.2/soc/peripherals/src/sapi_tick.o
+ .debug_frame   0x0000000000001688       0xb4 _programs/tp-moto/out/libs/sapi/sapi_v0.5.2/soc/peripherals/src/sapi_gpio.o
+ .debug_frame   0x000000000000173c       0xb8 _programs/tp-moto/out/libs/sapi/sapi_v0.5.2/soc/peripherals/usb/device/src/sapi_usb_device.o
+ .debug_frame   0x00000000000017f4       0x28 _programs/tp-moto/out/libs/sapi/sapi_v0.5.2/board/src/sapi_board.o
+ .debug_frame   0x000000000000181c       0xe4 _programs/tp-moto/out/libs/sapi/sapi_v0.5.2/abstract_modules/src/sapi_delay.o
+ .debug_frame   0x0000000000001900       0x2c /home/nahuel/CIAA/gcc-arm-none-eabi-7-2018-q2-update/bin/../lib/gcc/arm-none-eabi/7.3.1/thumb/v7e-m/fpv4-sp/hard/libgcc.a(_aeabi_uldivmod.o)
+ .debug_frame   0x000000000000192c       0x34 /home/nahuel/CIAA/gcc-arm-none-eabi-7-2018-q2-update/bin/../lib/gcc/arm-none-eabi/7.3.1/thumb/v7e-m/fpv4-sp/hard/libgcc.a(_udivmoddi4.o)
+ .debug_frame   0x0000000000001960       0x2c /home/nahuel/CIAA/gcc-arm-none-eabi-7-2018-q2-update/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a(lib_a-init.o)
+ .debug_frame   0x000000000000198c       0x20 /home/nahuel/CIAA/gcc-arm-none-eabi-7-2018-q2-update/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a(lib_a-memset.o)
 
 Cross Reference Table
 
@@ -18316,6 +18327,8 @@ ADCHS_IRQHandler                                  _programs/tp-moto/out/libs/lpc
 ATIMER_IRQHandler                                 _programs/tp-moto/out/libs/lpc_open/lpc_startup/src/vendor_interrupt.o
 ArrancadorRemoroUartConnector_init                _programs/tp-moto/out/_programs/tp-moto/src/ArrancadorRemoto.o
 ArrancadorRemoto_initBt                           _programs/tp-moto/out/_programs/tp-moto/src/ArrancadorRemoto.o
+                                                  _programs/tp-moto/out/_programs/tp-moto/src/main.o
+ArrancarRemoto_send                               _programs/tp-moto/out/_programs/tp-moto/src/ArrancadorRemoto.o
                                                   _programs/tp-moto/out/_programs/tp-moto/src/main.o
 Board_ADC_ReadBegin                               _programs/tp-moto/out/libs/lpc_open/boards/edu_ciaa_nxp/src/board.o
 Board_ADC_ReadEnd                                 _programs/tp-moto/out/libs/lpc_open/boards/edu_ciaa_nxp/src/board.o
@@ -18756,6 +18769,7 @@ MotoIniciar                                       _programs/tp-moto/out/_program
 Moto_disable                                      _programs/tp-moto/out/_programs/tp-moto/src/Moto.o
 Moto_enable                                       _programs/tp-moto/out/_programs/tp-moto/src/Moto.o
 Moto_setObserver                                  _programs/tp-moto/out/_programs/tp-moto/src/Moto.o
+                                                  _programs/tp-moto/out/_programs/tp-moto/src/main.o
 NMI_Handler                                       _programs/tp-moto/out/libs/cmsis_core//src/armv7m_startup.o
 NuBitmap                                          _programs/tp-moto/out/libs/sapi/sapi_v0.5.2/external_peripherals/display/fonts/greek_chars_5x7/src/lcd_greek_chars.o
 OmegaBitmap                                       _programs/tp-moto/out/libs/sapi/sapi_v0.5.2/external_peripherals/display/fonts/greek_chars_5x7/src/lcd_greek_chars.o
@@ -19381,7 +19395,9 @@ memset                                            /home/nahuel/CIAA/gcc-arm-none
                                                   _programs/tp-moto/out/libs/sapi/sapi_v0.5.2/soc/peripherals/usb/device/src/usbd_keyboard.o
                                                   _programs/tp-moto/out/libs/sapi/sapi_v0.5.2/soc/peripherals/usb/device/src/sapi_usb_device.o
                                                   _programs/tp-moto/out/libs/lpc_open/lpc_chip_43xx/src/clock_18xx_43xx.o
+modelChanged                                      _programs/tp-moto/out/_programs/tp-moto/src/main.o
 motoArrancado                                     _programs/tp-moto/out/_programs/tp-moto/src/Moto.o
+                                                  _programs/tp-moto/out/_programs/tp-moto/src/main.o
                                                   _programs/tp-moto/out/_programs/tp-moto/src/MotoRender.o
 motoElectricidad                                  _programs/tp-moto/out/_programs/tp-moto/src/Moto.o
                                                   _programs/tp-moto/out/_programs/tp-moto/src/MotoRender.o
@@ -19520,7 +19536,6 @@ timer3CompareMatch0func                           _programs/tp-moto/out/libs/sap
 timer3CompareMatch1func                           _programs/tp-moto/out/libs/sapi/sapi_v0.5.2/external_peripherals/motor/servo/src/sapi_servo.o
 timer3CompareMatch2func                           _programs/tp-moto/out/libs/sapi/sapi_v0.5.2/external_peripherals/motor/servo/src/sapi_servo.o
 timer3CompareMatch3func                           _programs/tp-moto/out/libs/sapi/sapi_v0.5.2/external_peripherals/motor/servo/src/sapi_servo.o
-uartConnector_send                                _programs/tp-moto/out/_programs/tp-moto/src/ArrancadorRemoto.o
 uartConnector_update                              _programs/tp-moto/out/_programs/tp-moto/src/ArrancadorRemoto.o
                                                   _programs/tp-moto/out/_programs/tp-moto/src/main.o
 uartInit                                          _programs/tp-moto/out/libs/sapi/sapi_v0.5.2/soc/peripherals/src/sapi_uart.o

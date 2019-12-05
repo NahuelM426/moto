@@ -10,7 +10,7 @@
 #include <sapi.h>
 #include <sapi_gpio.h>
 
-struct Moto;
+struct moto;
 
 enum EstadoMotoEletricidad{
 	NotengoEletricidad,TengoElectricidad
@@ -21,12 +21,12 @@ enum EstadoMoto{
 enum Tiempo{
 	Detener,Iniciar
 };
-typedef void (*MotoChangeObserver)(void * , struct Moto * );
+typedef void (*MotoChangeObserver)(void * , struct moto * );
 
 
 typedef struct moto{
 	int arrancado;
-	int electricidad;
+	unsigned char electricidad;
 	int tiempo;
 	MotoChangeObserver observerFunction;
 	delay_t tickDelStart;
@@ -37,10 +37,8 @@ void MotoIniciar(Moto * mt,unsigned char arranque,unsigned char electricidad);
 
 void controladorEncedido(Moto * bn);
 void Moto_setObserver(Moto * model, void * observerObject, MotoChangeObserver observerFunction );
-void appModel_enable(Moto * model);
-void appModel_disable(Moto * model);
-void appModel_toggle(Moto * model);
-
-
+void Moto_enable(Moto * model);
+void Moto_disable(Moto * model);
+unsigned char motoElectricidad(Moto* model);
 
 #endif /* PROGRAMS_TP_MOTO_INC_MOTO_H_ */

@@ -7,7 +7,6 @@
 #include "ArrancadorRemoto.h"
 #include "sapi.h"
 
-void initDeTiempo(ArrancadorRemoto * uartConnector);
 
 void ArrancadorRemoto_initBt(
 		ArrancadorRemoto * uartConnector,
@@ -65,7 +64,7 @@ void uartConnector_update(ArrancadorRemoto * uartConnector) {
 	;
 
 }
-void uartConnector_send(ArrancadorRemoto * uartConnector, char * string) {
+void ArrancarRemoto_send(ArrancadorRemoto * uartConnector, char * string) {
 	uartWriteString(uartConnector->map, string);
 	uartWriteString(uartConnector->map, uartConnector->endOfPackage);
 }

@@ -36,13 +36,13 @@ void moto_Opt(void * p){
 
 
 void bluetoothCommandReceived(void * Motopointer, uint8_t byte) {
-	if(byte == 'a') {
+	if(byte == 'e') {
 		moto_comenzarArranque((Moto *)Motopointer);
 		Moto * model = (Moto *)Motopointer;
-		delayInit(&model->tickDelStart,3000);
+		delayInit(&model->tickDelStart,2000);
 		model->tiempo = Iniciar;
 	}
-	if(byte == 'f') {
+	if(byte == 'a') {
 		moto_pararArranque((Moto *)Motopointer);
 	}
 	if(byte == 'p') {
@@ -50,15 +50,15 @@ void bluetoothCommandReceived(void * Motopointer, uint8_t byte) {
 		moto_pararArranque((Moto *)Motopointer);
 	}
 }
-//void modelChanged(void * uartConnectorPointer, Moto * model) {
-//	ArrancadorRemoto * uartConnector = (ArrancadorRemoto *) uartConnectorPointer;
-//	if(motoArrancado(model)) {
-//		uartConnector_send(uartConnector, "LED_ON");
-//	}
-//	else{
-//		uartConnector_send(uartConnector, "LED_OFF");
-//	}
-//}
+void modelChanged(void * uartConnectorPointer, Moto * model) {
+	ArrancadorRemoto * uartConnector = (ArrancadorRemoto *) uartConnectorPointer;
+	if(motoArrancado(model)) {
+		ArrancarRemoto_send(uartConnector, "LED_ON");
+	}
+	else {
+		ArrancarRemoto_send(uartConnector, "LED_OFF");
+	}
+}
 
 
 // FUNCION PRINCIPAL, PUNTO DE ENTRADA AL PROGRAMA LUEGO DE ENCENDIDO O RESET.
@@ -76,7 +76,6 @@ int main( void )
    //uint8_t data = 0;
 
    gpioInit(GPIO0,GPIO_OUTPUT);
-   gpioInit(GPIO2,GPIO_OUTPUT);
 
    Button button;
    Pulsador pulsador;
@@ -93,11 +92,10 @@ int main( void )
 
    ArrancadorRemoto_initBt(&uartConnector, &moto, bluetoothCommandReceived,moto_Opt);
 
-   //Moto_setObserver(&moto, (void *)&uartConnector, modelChanged);
+   Moto_setObserver(&moto, (void *)&uartConnector, modelChanged);
 
    button_init(&button, TEC1,moto_cortarCircuito,&moto);
 
-   // ---------- REPETIR POR SIEMPRE --------------------------
    while( TRUE ) {
 	   button_update(&button);
 	   controladorBoton(&pulsador);

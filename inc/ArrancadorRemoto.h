@@ -32,6 +32,8 @@ void ArrancadorRemoroUartConnector_init(ArrancadorRemoto * uartConnector, uartMa
 		char * endOfPackage);
 
 void uartConnector_update(ArrancadorRemoto * uartConnector);
-void uartConnector_send(ArrancadorRemoto * uartConnector, char * string);
+void ArrancarRemoto_send(ArrancadorRemoto * uartConnector, char * string);
+int tiempoActivo(ArrancadorRemoto * uar);
+int pasotiempo (ArrancadorRemoto * bn);
 
 #endif /* PROGRAMS_TP_MOTO_INC_ARRANCADORREMOTO_H_ */
